@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:listview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+xmlns:tabview="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TaborLedce.Views.MorseCodeTabPage">
+    <ContentPage.Content>
+        <Grid>
+            <tabview:SfTabView x:Name="TabView" 
+                               VisibleHeaderCount="5" 
+                               TabHeaderPosition="Bottom" 
+                               TabHeight="45"
+                               EnableSwiping="True"
+                               TabHeaderBackgroundColor="#F6F6F6"
+                               OverflowMode="CenterButton">
+                <tabview:SfTabView.CenterButtonSettings>
+                    <tabview:CenterButtonSettings Height="60" Width="60"/>
+                </tabview:SfTabView.CenterButtonSettings>
+
+                <tabview:SfTabView.SelectionIndicatorSettings>
+                    <tabview:SelectionIndicatorSettings Color="#1E90FF" 
+                                                         StrokeThickness="3"
+                                                         Position="Bottom"/>
+                </tabview:SfTabView.SelectionIndicatorSettings>
+
+                <tabview:SfTabView.CenterButtonView>
+                    <Image Source="translation.png" 
+                    Aspect="AspectFill"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </tabview:SfTabView.CenterButtonView>
+
+                <tabview:SfTabItem>
+                    <tabview:SfTabItem.HeaderContent>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="5*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="5*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image StyleId="Tabimage" 
+                         HeightRequest="25"
+                         Grid.Row="1"
+                         Aspect="AspectFit"
+                         HorizontalOptions="Center"
+                         Grid.Column="1" 
+                         WidthRequest="25"
+                         Source="Alphabet.png">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Grid>
+                    </tabview:SfTabItem.HeaderContent>
+
+                    <tabview:SfTabItem.Content>
+                        <StackLayout>
+                            <listview:SfListView
+                         Margin="0"
+                         Padding="0,5,0,5"
+                         SelectionMode="None"
+                         BackgroundColor="#F0F0F0"
+                         ItemSpacing="10,5,10,5"
+                         ItemsSource="{Binding AlphabetMorseCodes}"
+                             ItemSize="{OnPlatform Android={OnIdiom Phone=100, Tablet=100}, iOS={OnIdiom Phone=100, Tablet= 90}}">
+                                <listview:SfListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Frame BackgroundColor="White" Padding="1" HasShadow="{OnPlatform Android=true, iOS=false, UWP=true}">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="{OnPlatform Android={OnIdiom Phone=0.35*, Tablet=0.25*}, iOS={OnIdiom Phone=0.35*, Tablet=0.15*}, UWP={OnIdiom Desktop=auto, Phone=auto, Tablet=0.55*}, macOS=0.15*}" />
+                                                    <ColumnDefinition Width="{OnPlatform Android={OnIdiom Phone=0.65*, Tablet=0.75*}, iOS={OnIdiom Phone=0.65*, Tablet=0.85*}, UWP={OnIdiom Desktop=*, Phone=*, Tablet=0.15*}, macOS=*}" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <Image Grid.Row="0" Aspect="AspectFit" HorizontalOptions="FillAndExpand"
+                                                       VerticalOptions="FillAndExpand" Grid.Column="0" Source="{Binding Image}">
+                                                </Image>
+                                                <StackLayout Grid.Column="1" Padding="10,0,0,0" VerticalOptions="End">
+                                                    <Label Text="{Binding Lettr}" LineBreakMode="WordWrap" FontAttributes="Bold"
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=30, Tablet=22}, iOS={OnIdiom Phone=30, Tablet=22}}" />
+                                                    <Label LineBreakMode="WordWrap" Text="{Binding Helpr}"
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=20, Tablet=13}, iOS={OnIdiom Phone=20, Tablet=13}}" />
+                                                </StackLayout>
+                                            </Grid>
+                                        </Frame>
+                                    </DataTemplate>
+                                </listview:SfListView.ItemTemplate>
+                            </listview:SfListView>
+
+                        </StackLayout>
+                    </tabview:SfTabItem.Content>
+
+                </tabview:SfTabItem>
+
+                <tabview:SfTabItem>
+                    <tabview:SfTabItem.HeaderContent>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="5*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="5*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image StyleId="Tabimage1" 
+                         HeightRequest="25" 
+                         Grid.Row="1"
+                         Grid.Column="1" 
+                         HorizontalOptions="Center"     
+                         Aspect="AspectFit"
+                         WidthRequest="25" 
+                         Source="Number.png">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Grid>
+                    </tabview:SfTabItem.HeaderContent>
+                    <tabview:SfTabItem.Content>
+                        <StackLayout>
+                            <listview:SfListView
+                         Margin="0"
+                         Padding="0,5,0,5"
+                         SelectionMode="None"
+                         BackgroundColor="#F0F0F0"
+                         ItemSpacing="10,5,10,5"
+                         ItemsSource="{Binding NumberMorseCodes}"
+                             ItemSize="{OnPlatform Android={OnIdiom Phone=100, Tablet=100}, iOS={OnIdiom Phone=100, Tablet= 90}}">
+                                <listview:SfListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Frame BackgroundColor="White" Padding="1" HasShadow="{OnPlatform Android=true, iOS=false, UWP=true}">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="{OnPlatform Android={OnIdiom Phone=0.35*, Tablet=0.25*}, iOS={OnIdiom Phone=0.35*, Tablet=0.15*}, UWP={OnIdiom Desktop=auto, Phone=auto, Tablet=0.55*}, macOS=0.15*}" />
+                                                    <ColumnDefinition Width="{OnPlatform Android={OnIdiom Phone=0.65*, Tablet=0.75*}, iOS={OnIdiom Phone=0.65*, Tablet=0.85*}, UWP={OnIdiom Desktop=*, Phone=*, Tablet=0.15*}, macOS=*}" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <Image Grid.Row="0" Aspect="AspectFit" HorizontalOptions="FillAndExpand"
+                                                       VerticalOptions="FillAndExpand" Grid.Column="0" Source="{Binding Image}">
+                                                </Image>
+                                                <StackLayout Grid.Column="1" Padding="10,0,0,0" VerticalOptions="End">
+                                                    <Label Text="{Binding Lettr}" LineBreakMode="WordWrap" FontAttributes="Bold"
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=30, Tablet=22}, iOS={OnIdiom Phone=30, Tablet=22}}" />
+                                                    <Label LineBreakMode="WordWrap" Text="{Binding Helpr}"
+                                           FontSize="{OnPlatform Android={OnIdiom Phone=20, Tablet=13}, iOS={OnIdiom Phone=20, Tablet=13}}" />
+                                                </StackLayout>
+                                            </Grid>
+                                        </Frame>
+                                    </DataTemplate>
+                                </listview:SfListView.ItemTemplate>
+                            </listview:SfListView>
+
+                        </StackLayout>
+
+                    </tabview:SfTabItem.Content>
+                </tabview:SfTabItem>
+            </tabview:SfTabView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
