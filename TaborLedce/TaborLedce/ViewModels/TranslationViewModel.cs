@@ -1,7 +1,5 @@
 ﻿using System.Collections.ObjectModel;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using TaborLedce.MyCommands;
 using TaborLedce.Models;
 using Xamarin.Forms;
 
@@ -18,11 +16,14 @@ namespace TaborLedce.ViewModels
         {
             CreateTranslationCommand = new Command(CreateNewTranslation);
             MyTranslations = new ObservableCollection<TranslationItem>();
-            MyTranslations.Add(new TranslationItem{Text = "Zachy je nejlepší, král a vládce tohoto světa"});
+            MyTranslations.Add(new TranslationItem{Text = "Zachy je nejlepsi!"});
         }
 
         private void CreateNewTranslation()
         {
+            if(string.IsNullOrEmpty(TranslationText))
+                return;
+
             MyTranslations.Insert(0,new TranslationItem{Text = TranslationText});
         }
     }

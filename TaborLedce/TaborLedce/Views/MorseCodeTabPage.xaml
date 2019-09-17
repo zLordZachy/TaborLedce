@@ -15,6 +15,7 @@
                                VisibleHeaderCount="5"
                                TabHeaderPosition="Bottom"
                                TabHeight="45"
+                               SelectedIndex="{Binding SelectedIndex}"
                                EnableSwiping="True"
                                TabHeaderBackgroundColor="#F6F6F6"
                                OverflowMode="CenterButton">
@@ -52,7 +53,7 @@
                                WidthRequest="25"
                                Source="Alphabet.png">
                             <Image.GestureRecognizers>
-                                <TapGestureRecognizer />
+                                <TapGestureRecognizer Command="{Binding AlphabetImageClickCommand}" />
                             </Image.GestureRecognizers>
                         </Image>
                     </tabview:SfTabItem.HeaderContent>
@@ -79,7 +80,7 @@
                                                         Width="{OnPlatform Android={OnIdiom Phone=0.65*, Tablet=0.75*}, iOS={OnIdiom Phone=0.65*, Tablet=0.85*}, UWP={OnIdiom Desktop=*, Phone=*, Tablet=0.15*}, macOS=*}" />
                                                 </Grid.ColumnDefinitions>
 
-                                                <Image Grid.Row="0" Aspect="AspectFit"
+                                                <Image Margin="5,0,0,0"  Grid.Row="0" Aspect="AspectFit"
                                                        HorizontalOptions="FillAndExpand"
                                                        VerticalOptions="FillAndExpand" Grid.Column="0"
                                                        Source="{Binding Image}" />
@@ -106,7 +107,7 @@
                         <Image StyleId="Tabimage1" HeightRequest="25" Grid.Row="0" Grid.Column="0"
                                HorizontalOptions="Center" Aspect="AspectFit" WidthRequest="25" Source="Number.png">
                             <Image.GestureRecognizers>
-                                <TapGestureRecognizer />
+                                <TapGestureRecognizer Command="{Binding NumberImageClickCommand}" />
                             </Image.GestureRecognizers>
                         </Image>
                     </tabview:SfTabItem.HeaderContent>
@@ -132,7 +133,7 @@
                                                         Width="{OnPlatform Android={OnIdiom Phone=0.65*, Tablet=0.75*}, iOS={OnIdiom Phone=0.65*, Tablet=0.85*}, UWP={OnIdiom Desktop=*, Phone=*, Tablet=0.15*}, macOS=*}" />
                                                 </Grid.ColumnDefinitions>
 
-                                                <Image Grid.Row="0" Aspect="AspectFit"
+                                                <Image Margin="5,0,0,0" Grid.Row="0" Aspect="AspectFit"
                                                        HorizontalOptions="FillAndExpand"
                                                        VerticalOptions="FillAndExpand" Grid.Column="0"
                                                        Source="{Binding Image}" />

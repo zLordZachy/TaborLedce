@@ -1,45 +1,63 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:datagrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:datagrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TaborLedce.Views.TranslationPage"
              xmlns:Messages="clr-namespace:TaborLedce.Assets;assembly=TaborLedce"
+             xmlns:behaviors="clr-namespace:TaborLedce.Behaviors;assembly=TaborLedce"
              Title="Překlad">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Vymazat vše"  Command="{Binding CreateTranslationCommand}"/>
+        <ToolbarItem Text="Vymazat vše" Command="{Binding CreateTranslationCommand}" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
-                <Label Text="Text" FontSize="Medium" />
-                <Entry Text="{Binding TranslationText}" FontSize="Small" />
-            
-            <datagrid:SfDataGrid x:Name="dataGrid"
-                           AutoGenerateColumns="false"
-                           ItemsSource="{Binding MyTranslations}"
-                           ColumnSizer="Star"
-                           HeaderRowHeight="52"
-                           RowHeight="140"
-                           SelectionMode="Single"
-                           VerticalOverScrollMode="None">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition  Width="*"/>
+                </Grid.ColumnDefinitions>
+               <StackLayout>
+                    <Label Text="Text" FontSize="Medium" />
+                    <Entry Text="{Binding TranslationText}" FontSize="Small" />
+                </StackLayout>
+                <Image Grid.Row="0" Grid.Column="1" Source="translation.png" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center"
+                       HeightRequest="25" WidthRequest="25">
+                    <Image.Behaviors>
+                        <behaviors:ViewTappedButtonBehavior Command="{Binding OnLoginCommand}" AnimationType="Rotate" />
+                    </Image.Behaviors>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CreateTranslationCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+
+            <datagrid:SfDataGrid AutoGenerateColumns="false"
+                                 ItemsSource="{Binding MyTranslations}"
+                                 ColumnSizer="Star"
+                                 HeaderRowHeight="52"
+                                 RowHeight="140"
+                                 SelectionMode="Single"
+                                 VerticalOverScrollMode="None">
 
                 <datagrid:SfDataGrid.Columns>
 
                     <datagrid:GridTemplateColumn HeaderCellTextSize="16"
-                                                 
-                                           HeaderFontAttribute="Bold"
-                                           HeaderText="Hystorie zadání"
-                                           LineBreakMode="TailTruncation"
-                                           MappingName="Name">
+
+                                                 HeaderFontAttribute="Bold"
+                                                 HeaderText="Hystorie zadání"
+                                                 LineBreakMode="TailTruncation"
+                                                 MappingName="Name">
 
                         <datagrid:GridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Grid ColumnSpacing="10"
-                                  RowSpacing="10">
+                                      RowSpacing="10">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="140" />
                                     </Grid.RowDefinitions>
@@ -51,26 +69,24 @@ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 
                                     <Label Grid.Row="0"
                                            Grid.Column="0"
-                                           Margin ="10,10,16,0"
+                                           Margin="10,10,16,0"
                                            LineBreakMode="WordWrap"
                                            VerticalTextAlignment="Center"
                                            HorizontalOptions="Center"
                                            FontSize="15"
                                            Text="{Binding Text}"
-                                           TextColor="Black">
-                                    </Label>
+                                           TextColor="Black" />
 
                                     <Label Grid.Row="0"
-                                       Grid.Column="1"
-                                       Margin ="0,10,16,0"
-                                       LineBreakMode="WordWrap"
-                                       VerticalTextAlignment="Center"
-                                       HorizontalOptions="Center"
-                                       FontSize="15"
-                                       FontFamily="{StaticResource Morse}"
-                                       Text="{Binding Text}"
-                                       TextColor="Black">
-                                    </Label>
+                                           Grid.Column="1"
+                                           Margin="0,10,16,0"
+                                           LineBreakMode="WordWrap"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalOptions="Center"
+                                           FontSize="15"
+                                           FontFamily="{StaticResource Morse}"
+                                           Text="{Binding Text}"
+                                           TextColor="Black" />
                                 </Grid>
                             </DataTemplate>
 

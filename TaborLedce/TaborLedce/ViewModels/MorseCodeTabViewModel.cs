@@ -13,8 +13,12 @@ namespace TaborLedce.ViewModels
         public ObservableCollection<MorseCodeItem> AlphabetMorseCodes { get; set; }
         public ObservableCollection<MorseCodeItem> NumberMorseCodes { get; set; }
         public IAsyncCommand<object> TranslationCommand { get; set; }
+        public ICommand NumberImageClickCommand { get; set; }
+        public ICommand AlphabetImageClickCommand { get; set; }
 
         private readonly INavigation _navigation;
+
+        public int SelectedIndex { get; set; }
 
         public MorseCodeTabViewModel(INavigation navigation)
         {
@@ -65,6 +69,19 @@ namespace TaborLedce.ViewModels
                 new MorseCodeItem{Lettr = "9",Helpr = "", Image = "code9.png" },
             };
             TranslationCommand = new AsyncCommand<object>(OpenTransaltionPage);
+            NumberImageClickCommand = new Command(SwichNumberTab);
+            AlphabetImageClickCommand = new Command(SwichAlphabetTab);
+            SelectedIndex = 0;
+        }
+
+        private void SwichAlphabetTab(object obj)
+        {
+            SelectedIndex = 0;
+        }
+
+        private void SwichNumberTab(object obj)
+        {
+            SelectedIndex = 1;
         }
 
         private async Task OpenTransaltionPage(object o)
