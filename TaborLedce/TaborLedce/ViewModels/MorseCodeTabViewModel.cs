@@ -1,5 +1,10 @@
 ﻿using System.Collections.ObjectModel;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using TaborLedce.MyCommands;
 using TaborLedce.Models;
+using TaborLedce.Views;
+using Xamarin.Forms;
 
 namespace TaborLedce.ViewModels
 {
@@ -7,10 +12,13 @@ namespace TaborLedce.ViewModels
     {
         public ObservableCollection<MorseCodeItem> AlphabetMorseCodes { get; set; }
         public ObservableCollection<MorseCodeItem> NumberMorseCodes { get; set; }
+        public IAsyncCommand<object> TranslationCommand { get; set; }
 
+        private readonly INavigation _navigation;
 
-        public MorseCodeTabViewModel()
+        public MorseCodeTabViewModel(INavigation navigation)
         {
+            _navigation = navigation;
             AlphabetMorseCodes= new ObservableCollection<MorseCodeItem>
             {
                 new MorseCodeItem{Lettr = "A",Helpr = "akát", Image = "codeA.png" },
@@ -56,7 +64,12 @@ namespace TaborLedce.ViewModels
                 new MorseCodeItem{Lettr = "8",Helpr = "", Image = "code8.png" },
                 new MorseCodeItem{Lettr = "9",Helpr = "", Image = "code9.png" },
             };
+            TranslationCommand = new AsyncCommand<object>(OpenTransaltionPage);
         }
 
+        private async Task OpenTransaltionPage(object o)
+        {
+            await _navigation.PushModalAsync(new NavigationPage(new TranslationPage()));
+        }
     }
 }

@@ -45,6 +45,16 @@
                     Value="/Assets/FontAwesome5Regular.otf#Font Awesome 5 Free" />
             </OnPlatform>
 
+            <OnPlatform x:TypeArguments="x:String"
+                        x:Key="Morse">
+                <On Platform="Android"
+                    Value="Morse.otf#Regular" />
+                <On Platform="iOS"
+                    Value="Morse-Regular" />
+                <On Platform="UWP"
+                    Value="/Assets/Morse.TTF#Font Awesome 5 Free" />
+            </OnPlatform>
+
         </ResourceDictionary>
     </Application.Resources>
     

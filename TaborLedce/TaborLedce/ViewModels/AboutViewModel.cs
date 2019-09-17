@@ -11,7 +11,7 @@ namespace TaborLedce.ViewModels
         {
             Title = "About";
 
-            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
+            OpenWebCommand = new Xamarin.Forms.Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
         }
 
         public ICommand OpenWebCommand { get; }

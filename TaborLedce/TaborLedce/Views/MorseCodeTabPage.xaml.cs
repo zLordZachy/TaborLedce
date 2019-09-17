@@ -9,7 +9,7 @@ namespace TaborLedce.Views
     {
         public MorseCodeTabPage()
         {
-            MorseCodeTabViewModel viewModel = new MorseCodeTabViewModel();
+            MorseCodeTabViewModel viewModel = new MorseCodeTabViewModel(Navigation);
             BindingContext = viewModel;
             InitializeComponent();
         }

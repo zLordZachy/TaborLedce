@@ -123,4 +123,7 @@
   <data name="Oaplikaci" xml:space="preserve">
     <value>O aplikaci</value>
   </data>
+  <data name="Vymazat" xml:space="preserve">
+    <value>Vymazat</value>
+  </data>
 </root>

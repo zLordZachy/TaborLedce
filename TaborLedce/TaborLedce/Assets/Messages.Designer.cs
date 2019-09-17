@@ -77,5 +77,14 @@ namespace TaborLedce.Assets {
                 return ResourceManager.GetString("Oaplikaci", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vymazat.
+        /// </summary>
+        internal static string Vymazat {
+            get {
+                return ResourceManager.GetString("Vymazat", resourceCulture);
+            }
+        }
     }
 }

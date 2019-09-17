@@ -41,7 +41,7 @@ namespace TaborLedce.Views
 
         async void AddItem_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
+            await Navigation.PushModalAsync(new NavigationPage(new TranslationPage()));
         }
 
         protected override void OnAppearing()
