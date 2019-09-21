@@ -38,9 +38,11 @@ namespace TaborLedce.Services
         private void SaveDataToFileAsync(string data, string folderName, string fileName)
         {
             _fileManager.CreateFolder(FolderName);
-            string path = Combine(folderName, fileName);
+            string[] files = _fileManager.GetAllDirectories();
+            string fileFolder = files.FirstOrDefault(x => GetFileName(x).Equals(FolderName));
+            string path = Combine(fileFolder, fileName);
             _fileManager.DeleteFile(path);
-           _fileManager.AppendLine(path, data);
+            _fileManager.AppendLine(path, data);
         }
 
         private string ReadDataFromFileAsync(string folder, string fileName)

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
@@ -19,14 +20,34 @@ namespace TaborLedce.ViewModels
 
         public ICommand DeleteAllTranslationCommand { get; set; }
 
+        public ICommand KeyPressedCommand { get; set; }
+        
+
         public TranslationViewModel(ILocalDataManager localDataManager)
         {
             _localDataManager = localDataManager;
             CreateTranslationCommand = new Command(CreateNewTranslation);
             DeleteAllTranslationCommand = new Command(DeleteAllTranslations);
+            KeyPressedCommand = new Command(KeyPressed);
             MyTranslations = new ObservableCollection<TranslationItem>();
             IList<TranslationItem> currentTranslations = _localDataManager.LoadTransalations();
             currentTranslations.ForEach(x => MyTranslations.Add(x));
+        }
+
+        private void KeyPressed(object obj)
+        {
+            string character = (string)obj;
+
+            if (character == "back")
+            {
+                if (TranslationText.Length > 0)
+                {
+                    TranslationText = TranslationText.Remove(TranslationText.Length - 1);
+                }
+                return;
+            }
+
+            TranslationText = String.Join(String.Empty, TranslationText, character);
         }
 
         private void DeleteAllTranslations()

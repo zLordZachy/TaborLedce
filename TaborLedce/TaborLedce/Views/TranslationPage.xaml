@@ -11,31 +11,53 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
              x:Class="TaborLedce.Views.TranslationPage"
              xmlns:assets="clr-namespace:TaborLedce.Assets;assembly=TaborLedce"
              xmlns:behaviors="clr-namespace:TaborLedce.Behaviors;assembly=TaborLedce"
+            xmlns:converter="clr-namespace:TaborLedce.Converters;assembly=TaborLedce"
              >
+    
     <NavigationPage.TitleView>
         <Label Text="{x:Static assets:Messages.Prekladac}" TextColor="AliceBlue" FontSize="Large"  />
     </NavigationPage.TitleView>
 
     <ContentPage.ToolbarItems>
+        
         <ToolbarItem Text="Vymazat vše" Command="{Binding DeleteAllTranslationCommand}" />
     </ContentPage.ToolbarItems>
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:NegateBoolConverter x:Key="inverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+  
+
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
-            <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Start"  HeightRequest="90">
-                    <Grid>
+        <Grid Padding="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="17*"  />
+            </Grid.RowDefinitions>
+            <Grid Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"></RowDefinition>
+                        </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition  Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0"  Text="{x:Static assets:Messages.TextProPreklad}" FontSize="Medium" VerticalOptions="Center" VerticalTextAlignment="Center" />
+                    <StackLayout VerticalOptions="Start">
+                        <Label
+                               Text="{x:Static assets:Messages.TextProPreklad}" FontSize="Medium" VerticalOptions="Center"
+                               VerticalTextAlignment="Center" />
+                    </StackLayout>
                         <sfSwitch:SfSwitch Grid.Column="1"
-                                         IsOn="{Binding TranslationMorseCode}"
-                                         x:Name="ModeSwitch"
-                                         VerticalOptions="Start"
-                                         HorizontalOptions="End"
-                                         AllowIndeterminateState="False"
-                                         VisualType="Custom">
+                                             IsOn="{Binding TranslationMorseCode}"
+                                             x:Name="ModeSwitch"
+                                             VerticalOptions="Start"
+                                             HorizontalOptions="End"
+                                             AllowIndeterminateState="False"
+                                             VisualType="Custom">
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="CommonStates">
                                     <VisualState x:Name="On">
@@ -43,21 +65,21 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                             <Setter Property="SwitchSettings">
                                                 <Setter.Value>
                                                     <sfSwitch:DefaultSwitchSettings x:TypeArguments="sfSwitch:OnState"
-                                                            TrackWidthRequest="60"
-                                                            TrackHeightRequest="25"
-                                                            TrackCornerRadius="18"
-                                                            TrackBorderWidth="1"
-                                                            TrackBorderColor="Black"
-                                                            TrackColor="White"                   
-                                                            TrackImageSource="alphabet.png"
-                                                            
-                                                            ThumbImageSource="translation.png"                       
-                                                            HasThumbShadow="False"
-                                                            ThumbBorderWidth="0"
-                                                            ThumbWidthRequest="25"
-                                                            ThumbHeightRequest="25"
-                                                            ThumbCornerRadius="17"
-                                                            ThumbColor="Transparent"/>
+                                                                TrackWidthRequest="60"
+                                                                TrackHeightRequest="25"
+                                                                TrackCornerRadius="18"
+                                                                TrackBorderWidth="1"
+                                                                TrackBorderColor="Black"
+                                                                TrackColor="White"                   
+                                                                TrackImageSource="alphabet.png"
+                                                                
+                                                                ThumbImageSource="translation.png"                       
+                                                                HasThumbShadow="False"
+                                                                ThumbBorderWidth="0"
+                                                                ThumbWidthRequest="25"
+                                                                ThumbHeightRequest="25"
+                                                                ThumbCornerRadius="17"
+                                                                ThumbColor="Transparent"/>
                                                 </Setter.Value>
                                             </Setter>
                                         </VisualState.Setters>
@@ -68,20 +90,20 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                             <Setter Property="SwitchSettings">
                                                 <Setter.Value>
                                                     <sfSwitch:DefaultSwitchSettings x:TypeArguments="sfSwitch:OffState"
-                                                            TrackWidthRequest="60"
-                                                            TrackHeightRequest="25"
-                                                            TrackCornerRadius="18"
-                                                            TrackBorderWidth="0"
-                                                            TrackBorderColor="Black"
-                                                            TrackImageSource="codeN.png"
-                                                            
-                                                            ThumbImageSource="translation.png"  
-                                                            HasThumbShadow="False"
-                                                            ThumbBorderWidth="0"
-                                                            ThumbWidthRequest="25"
-                                                            ThumbHeightRequest="25"
-                                                            ThumbCornerRadius="17"
-                                                            ThumbColor="Transparent"/>
+                                                                TrackWidthRequest="60"
+                                                                TrackHeightRequest="25"
+                                                                TrackCornerRadius="18"
+                                                                TrackBorderWidth="0"
+                                                                TrackBorderColor="Black"
+                                                                TrackImageSource="codeN.png"
+                                                                
+                                                                ThumbImageSource="translation.png"  
+                                                                HasThumbShadow="False"
+                                                                ThumbBorderWidth="0"
+                                                                ThumbWidthRequest="25"
+                                                                ThumbHeightRequest="25"
+                                                                ThumbCornerRadius="17"
+                                                                ThumbColor="Transparent"/>
                                                 </Setter.Value>
                                             </Setter>
                                         </VisualState.Setters>
@@ -90,40 +112,74 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                             </VisualStateManager.VisualStateGroups>
                         </sfSwitch:SfSwitch>
                     </Grid>
-                <Grid HorizontalOptions="StartAndExpand">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="12*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <StackLayout HorizontalOptions="FillAndExpand" IsEnabled="{Binding TranslationMorseCode}">
-                        <maskededit:SfMaskedEdit ValidationMode="KeyPress" Value="{Binding TranslationText, Mode=TwoWay}"  Mask="[0-9a-zA-Z.,]{0,}" MaskType="RegEx"  Keyboard="Default"/>
-                    </StackLayout>
-                    <Image Grid.Column="1" Source="translation.png" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="End"
-                                           Margin="0,0,5,0"
-                           HeightRequest="30" WidthRequest="30" >
-                        <Image.Behaviors>
-                            <behaviors:ViewTappedButtonBehavior Command="{Binding OnLoginCommand}" AnimationType="Rotate"  />
-                        </Image.Behaviors>
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding CreateTranslationCommand}" />
-                        </Image.GestureRecognizers>
-                    </Image>
-                </Grid>
-            </StackLayout>
-            <Grid  HorizontalOptions="Center" HeightRequest="45" IsVisible="{Binding TranslationMorseCode}">
+            <Grid Row="1" HorizontalOptions="StartAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout HorizontalOptions="FillAndExpand" IsEnabled="{Binding TranslationMorseCode,  Converter={StaticResource inverter}}" >
+                            <maskededit:SfMaskedEdit ValidationMode="KeyPress" Value="{Binding TranslationText, Mode=TwoWay}"  Mask="[0-9a-zA-Z.,―\s]{0,}" MaskType="RegEx"  Keyboard="Default"/>
+                        </StackLayout>
+                        <Image Grid.Column="1" Source="translation.png" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="End"
+                                               Margin="0,0,5,0">
+                            <Image.Behaviors>
+                                <behaviors:ViewTappedButtonBehavior Command="{Binding OnLoginCommand}" AnimationType="Rotate"  />
+                            </Image.Behaviors>
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding CreateTranslationCommand}" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+            <Grid Row="2"  HorizontalOptions="Center" IsVisible="{Binding TranslationMorseCode}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Text="."></Button>
-                <Button  Grid.Column="1" Text="_"></Button>
-                <Button  Grid.Column="2" Text="Mezera"></Button>
-                <Button  Grid.Column="3" Text="Smazat"></Button>
+                <sfSwitch:SfButton Command="{Binding KeyPressedCommand}" CommandParameter="." Grid.Column="0" >
+                    <sfSwitch:SfButton.Content>
+                        <Image Source="dot.png" 
+                               HeightRequest="25" 
+                               WidthRequest="20"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center"/>
+                    </sfSwitch:SfButton.Content>
+                </sfSwitch:SfButton>
+                <sfSwitch:SfButton  Grid.Column="1" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter="―">
+                    <sfSwitch:SfButton.Content>
+                        <Image Source="line.png" 
+                               HeightRequest="25" 
+                               WidthRequest="20"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center"/>
+                    </sfSwitch:SfButton.Content>
+                </sfSwitch:SfButton>
+                <sfSwitch:SfButton  Grid.Column="2" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter=" ">
+                    <sfSwitch:SfButton.Content>
+                        <Image Source="space.png" 
+                               
+                               HeightRequest="25" 
+                               WidthRequest="20"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center"/>
+                    </sfSwitch:SfButton.Content>
+                </sfSwitch:SfButton>
+                <sfSwitch:SfButton  Grid.Column="3" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter="back">
+                    <sfSwitch:SfButton.Content>
+                        <Image Source="backSpace.png" 
+                               HeightRequest="25" 
+                               WidthRequest="20"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center"/>
+                    </sfSwitch:SfButton.Content>
+                </sfSwitch:SfButton>
             </Grid>
 
-            <datagrid:SfDataGrid AutoGenerateColumns="false"
+            <datagrid:SfDataGrid Row="3" AutoGenerateColumns="false"
                                  ItemsSource="{Binding MyTranslations}"
                                  ColumnSizer="Star"
                                  HeaderRowHeight="52"
@@ -180,6 +236,6 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                     </datagrid:GridTemplateColumn>
                 </datagrid:SfDataGrid.Columns>
             </datagrid:SfDataGrid>
-        </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

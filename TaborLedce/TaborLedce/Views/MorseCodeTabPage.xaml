@@ -46,7 +46,6 @@
 
                 <tabview:SfTabItem>
                     <tabview:SfTabItem.HeaderContent>
-
                         <Image StyleId="Tabimage" HeightRequest="25" Grid.Row="1" Aspect="AspectFit"
                                HorizontalOptions="Center"
                                Grid.Column="1"
