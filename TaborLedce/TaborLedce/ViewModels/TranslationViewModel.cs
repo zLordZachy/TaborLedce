@@ -14,7 +14,7 @@ namespace TaborLedce.ViewModels
         private readonly ILocalDataManager _localDataManager;
         public ObservableCollection<TranslationItem> MyTranslations { get; set; }
         public string TranslationText { get; set; }
-
+        public bool TranslationMorseCode { get; set; }
         public ICommand CreateTranslationCommand { get; set; }
 
         public ICommand DeleteAllTranslationCommand { get; set; }

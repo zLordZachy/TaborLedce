@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:sfSwitch="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
              xmlns:datagrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -20,25 +22,105 @@
 
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
-            <Grid>
+            <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Start"  HeightRequest="90">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition  Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0"  Text="{x:Static assets:Messages.TextProPreklad}" FontSize="Medium" VerticalOptions="Center" VerticalTextAlignment="Center" />
+                        <sfSwitch:SfSwitch Grid.Column="1"
+                                         IsOn="{Binding TranslationMorseCode}"
+                                         x:Name="ModeSwitch"
+                                         VerticalOptions="Start"
+                                         HorizontalOptions="End"
+                                         AllowIndeterminateState="False"
+                                         VisualType="Custom">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="On">
+                                        <VisualState.Setters>
+                                            <Setter Property="SwitchSettings">
+                                                <Setter.Value>
+                                                    <sfSwitch:DefaultSwitchSettings x:TypeArguments="sfSwitch:OnState"
+                                                            TrackWidthRequest="60"
+                                                            TrackHeightRequest="25"
+                                                            TrackCornerRadius="18"
+                                                            TrackBorderWidth="1"
+                                                            TrackBorderColor="Black"
+                                                            TrackColor="White"                   
+                                                            TrackImageSource="alphabet.png"
+                                                            
+                                                            ThumbImageSource="translation.png"                       
+                                                            HasThumbShadow="False"
+                                                            ThumbBorderWidth="0"
+                                                            ThumbWidthRequest="25"
+                                                            ThumbHeightRequest="25"
+                                                            ThumbCornerRadius="17"
+                                                            ThumbColor="Transparent"/>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                    <VisualState x:Name="Off">
+                                        <VisualState.Setters>
+                                            <Setter Property="SwitchSettings">
+                                                <Setter.Value>
+                                                    <sfSwitch:DefaultSwitchSettings x:TypeArguments="sfSwitch:OffState"
+                                                            TrackWidthRequest="60"
+                                                            TrackHeightRequest="25"
+                                                            TrackCornerRadius="18"
+                                                            TrackBorderWidth="0"
+                                                            TrackBorderColor="Black"
+                                                            TrackImageSource="codeN.png"
+                                                            
+                                                            ThumbImageSource="translation.png"  
+                                                            HasThumbShadow="False"
+                                                            ThumbBorderWidth="0"
+                                                            ThumbWidthRequest="25"
+                                                            ThumbHeightRequest="25"
+                                                            ThumbCornerRadius="17"
+                                                            ThumbColor="Transparent"/>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </sfSwitch:SfSwitch>
+                    </Grid>
+                <Grid HorizontalOptions="StartAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout HorizontalOptions="FillAndExpand" IsEnabled="{Binding TranslationMorseCode}">
+                        <maskededit:SfMaskedEdit ValidationMode="KeyPress" Value="{Binding TranslationText, Mode=TwoWay}"  Mask="[0-9a-zA-Z.,]{0,}" MaskType="RegEx"  Keyboard="Default"/>
+                    </StackLayout>
+                    <Image Grid.Column="1" Source="translation.png" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="End"
+                                           Margin="0,0,5,0"
+                           HeightRequest="30" WidthRequest="30" >
+                        <Image.Behaviors>
+                            <behaviors:ViewTappedButtonBehavior Command="{Binding OnLoginCommand}" AnimationType="Rotate"  />
+                        </Image.Behaviors>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CreateTranslationCommand}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+            </StackLayout>
+            <Grid  HorizontalOptions="Center" HeightRequest="45" IsVisible="{Binding TranslationMorseCode}">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5*" />
-                    <ColumnDefinition  Width="*"/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-               <StackLayout>
-                    <Label Text="{x:Static assets:Messages.TextProPreklad}" FontSize="Medium" />
-                   
-                    <Entry Text="{Binding TranslationText}" FontSize="Small" />
-                </StackLayout>
-                <Image Grid.Row="0" Grid.Column="1" Source="translation.png" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center"
-                       HeightRequest="25" WidthRequest="25">
-                    <Image.Behaviors>
-                        <behaviors:ViewTappedButtonBehavior Command="{Binding OnLoginCommand}" AnimationType="Rotate" />
-                    </Image.Behaviors>
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding CreateTranslationCommand}" />
-                    </Image.GestureRecognizers>
-                </Image>
+                <Button Grid.Column="0" Text="."></Button>
+                <Button  Grid.Column="1" Text="_"></Button>
+                <Button  Grid.Column="2" Text="Mezera"></Button>
+                <Button  Grid.Column="3" Text="Smazat"></Button>
             </Grid>
 
             <datagrid:SfDataGrid AutoGenerateColumns="false"
