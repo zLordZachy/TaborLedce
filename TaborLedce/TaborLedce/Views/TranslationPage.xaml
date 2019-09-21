@@ -15,7 +15,7 @@
     </NavigationPage.TitleView>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Vymazat vše" Command="{Binding CreateTranslationCommand}" />
+        <ToolbarItem Text="Vymazat vše" Command="{Binding DeleteAllTranslationCommand}" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
@@ -27,6 +27,7 @@
                 </Grid.ColumnDefinitions>
                <StackLayout>
                     <Label Text="{x:Static assets:Messages.TextProPreklad}" FontSize="Medium" />
+                   
                     <Entry Text="{Binding TranslationText}" FontSize="Small" />
                 </StackLayout>
                 <Image Grid.Row="0" Grid.Column="1" Source="translation.png" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center"

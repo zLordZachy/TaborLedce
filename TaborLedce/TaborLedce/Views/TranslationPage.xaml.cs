@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using TaborLedce.PlatformSpecific;
+using TaborLedce.Services;
 using TaborLedce.ViewModels;
 using Xamarin.Forms;
 
@@ -11,8 +13,7 @@ namespace TaborLedce.Views
     {
         public TranslationPage()
         {
-
-            TranslationViewModel viewModel = new TranslationViewModel();
+            TranslationViewModel viewModel = new TranslationViewModel(new LocalDataManager(DependencyService.Get<IFileManager>()));
             BindingContext = viewModel;
             InitializeComponent();
         }
