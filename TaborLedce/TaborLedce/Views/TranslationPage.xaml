@@ -121,7 +121,7 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <StackLayout HorizontalOptions="FillAndExpand" IsEnabled="{Binding TranslationMorseCode,  Converter={StaticResource inverter}}" >
-                            <maskededit:SfMaskedEdit ValidationMode="KeyPress" Value="{Binding TranslationText, Mode=TwoWay}"  Mask="[0-9a-zA-Z.,―\s]{0,}" MaskType="RegEx"  Keyboard="Default"/>
+                            <maskededit:SfMaskedEdit ValidationMode="KeyPress" Value="{Binding TranslationText, Mode=TwoWay}"  Mask="[0-9a-zA-Z.\|,―\s]{0,}" MaskType="RegEx"  Keyboard="Default"/>
                         </StackLayout>
                         <Image Grid.Column="1" Source="translation.png" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="End"
                                                Margin="0,0,5,0">
@@ -135,6 +135,7 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                     </Grid>
             <Grid Row="2"  HorizontalOptions="Center" IsVisible="{Binding TranslationMorseCode}">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
                     <ColumnDefinition />
                     <ColumnDefinition />
                     <ColumnDefinition />
@@ -158,7 +159,16 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                VerticalOptions="Center"/>
                     </sfSwitch:SfButton.Content>
                 </sfSwitch:SfButton>
-                <sfSwitch:SfButton  Grid.Column="2" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter=" ">
+                <sfSwitch:SfButton  Grid.Column="2" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter="|">
+                    <sfSwitch:SfButton.Content>
+                        <Image Source="deliminator.png" 
+                               HeightRequest="25" 
+                               WidthRequest="20"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center"/>
+                    </sfSwitch:SfButton.Content>
+                </sfSwitch:SfButton>
+                <sfSwitch:SfButton  Grid.Column="3" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter=" ">
                     <sfSwitch:SfButton.Content>
                         <Image Source="space.png" 
                                
@@ -168,7 +178,7 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                VerticalOptions="Center"/>
                     </sfSwitch:SfButton.Content>
                 </sfSwitch:SfButton>
-                <sfSwitch:SfButton  Grid.Column="3" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter="back">
+                <sfSwitch:SfButton  Grid.Column="4" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter="back">
                     <sfSwitch:SfButton.Content>
                         <Image Source="backSpace.png" 
                                HeightRequest="25" 

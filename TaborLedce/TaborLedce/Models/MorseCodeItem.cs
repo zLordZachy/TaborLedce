@@ -9,5 +9,6 @@ namespace TaborLedce.Models
         public string Image { get; set; }
         public string Lettr { get; set; }
         public string Helpr { get; set; }
+        public string Code { get; set; }
     }
 }
