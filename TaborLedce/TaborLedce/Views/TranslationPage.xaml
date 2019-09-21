@@ -7,9 +7,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TaborLedce.Views.TranslationPage"
-             xmlns:Messages="clr-namespace:TaborLedce.Assets;assembly=TaborLedce"
+             xmlns:assets="clr-namespace:TaborLedce.Assets;assembly=TaborLedce"
              xmlns:behaviors="clr-namespace:TaborLedce.Behaviors;assembly=TaborLedce"
-             Title="Překlad">
+             >
+    <NavigationPage.TitleView>
+        <Label Text="{x:Static assets:Messages.Prekladac}" TextColor="AliceBlue" FontSize="Large"  />
+    </NavigationPage.TitleView>
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Vymazat vše" Command="{Binding CreateTranslationCommand}" />
@@ -23,7 +26,7 @@
                     <ColumnDefinition  Width="*"/>
                 </Grid.ColumnDefinitions>
                <StackLayout>
-                    <Label Text="Text" FontSize="Medium" />
+                    <Label Text="{x:Static assets:Messages.TextProPreklad}" FontSize="Medium" />
                     <Entry Text="{Binding TranslationText}" FontSize="Small" />
                 </StackLayout>
                 <Image Grid.Row="0" Grid.Column="1" Source="translation.png" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center"
@@ -50,7 +53,7 @@
                     <datagrid:GridTemplateColumn HeaderCellTextSize="16"
 
                                                  HeaderFontAttribute="Bold"
-                                                 HeaderText="Hystorie zadání"
+                                                 HeaderText="{x:Static assets:Messages.HystorieZadani}"
                                                  LineBreakMode="TailTruncation"
                                                  MappingName="Name">
 

@@ -84,13 +84,18 @@
                                                        HorizontalOptions="FillAndExpand"
                                                        VerticalOptions="FillAndExpand" Grid.Column="0"
                                                        Source="{Binding Image}" />
-                                                <StackLayout Grid.Column="1" Padding="10,0,0,0" VerticalOptions="End">
-                                                    <Label Text="{Binding Lettr}" LineBreakMode="WordWrap"
+                                                <Grid Grid.Column="1" Padding="10,0,0,0" VerticalOptions="FillAndExpand">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition />
+                                                        <ColumnDefinition />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Grid.Column="0" Text="{Binding Lettr}" LineBreakMode="WordWrap" VerticalOptions="Center" HorizontalOptions="Start"
                                                            FontAttributes="Bold"
-                                                           FontSize="{OnPlatform Android={OnIdiom Phone=30, Tablet=22}, iOS={OnIdiom Phone=30, Tablet=22}}" />
-                                                    <Label LineBreakMode="WordWrap" Text="{Binding Helpr}"
-                                                           FontSize="{OnPlatform Android={OnIdiom Phone=20, Tablet=13}, iOS={OnIdiom Phone=20, Tablet=13}}" />
-                                                </StackLayout>
+                                                           FontSize="{OnPlatform Android={OnIdiom Phone=30, Tablet=35}, iOS={OnIdiom Phone=30, Tablet=35}}" />
+                                                    <Label Grid.Column="1" LineBreakMode="WordWrap" Text="{Binding Helpr}"
+                                                           FontSize="{OnPlatform Android={OnIdiom Phone=15, Tablet=20}, iOS={OnIdiom Phone=15, Tablet=20}}"
+                                                           VerticalOptions="Center" HorizontalOptions="End" Margin="0,0,5,0" HorizontalTextAlignment="End"/>
+                                                </Grid>
                                             </Grid>
                                         </Frame>
                                     </DataTemplate>
@@ -137,13 +142,18 @@
                                                        HorizontalOptions="FillAndExpand"
                                                        VerticalOptions="FillAndExpand" Grid.Column="0"
                                                        Source="{Binding Image}" />
-                                                <StackLayout Grid.Column="1" Padding="10,0,0,0" VerticalOptions="End">
-                                                    <Label Text="{Binding Lettr}" LineBreakMode="WordWrap"
-                                                           FontAttributes="Bold"
-                                                           FontSize="{OnPlatform Android={OnIdiom Phone=30, Tablet=22}, iOS={OnIdiom Phone=30, Tablet=22}}" />
-                                                    <Label LineBreakMode="WordWrap" Text="{Binding Helpr}"
-                                                           FontSize="{OnPlatform Android={OnIdiom Phone=20, Tablet=13}, iOS={OnIdiom Phone=20, Tablet=13}}" />
-                                                </StackLayout>
+                                                <Grid Grid.Column="1" Padding="10,0,0,0" VerticalOptions="FillAndExpand">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition />
+                                                        <ColumnDefinition />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Grid.Column="0" Text="{Binding Lettr}" LineBreakMode="WordWrap" VerticalOptions="Center" HorizontalOptions="Start"
+                                                           FontAttributes="Bold" Margin="10,0,0,0"
+                                                           FontSize="{OnPlatform Android={OnIdiom Phone=30, Tablet=35}, iOS={OnIdiom Phone=30, Tablet=35}}" />
+                                                    <Label Grid.Column="1" LineBreakMode="WordWrap" Text="{Binding Helpr}"
+                                                           FontSize="{OnPlatform Android={OnIdiom Phone=15, Tablet=20}, iOS={OnIdiom Phone=15, Tablet=20}}"
+                                                           VerticalOptions="Center" HorizontalOptions="End" Margin="0,0,5,0" HorizontalTextAlignment="End"/>
+                                                </Grid>
                                             </Grid>
                                         </Frame>
                                     </DataTemplate>

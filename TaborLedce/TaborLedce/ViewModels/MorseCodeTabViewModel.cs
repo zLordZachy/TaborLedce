@@ -86,6 +86,7 @@ namespace TaborLedce.ViewModels
 
         private async Task OpenTransaltionPage(object o)
         {
+            await Task.Delay(50);
             await _navigation.PushModalAsync(new NavigationPage(new TranslationPage()));
         }
     }

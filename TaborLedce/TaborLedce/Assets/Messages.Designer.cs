@@ -61,6 +61,15 @@ namespace TaborLedce.Assets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hystorie zadání.
+        /// </summary>
+        internal static string HystorieZadani {
+            get {
+                return ResourceManager.GetString("HystorieZadani", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Morseovka.
         /// </summary>
         internal static string Morseovka {
@@ -75,6 +84,24 @@ namespace TaborLedce.Assets {
         internal static string Oaplikaci {
             get {
                 return ResourceManager.GetString("Oaplikaci", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PŘEKLADAČ.
+        /// </summary>
+        internal static string Prekladac {
+            get {
+                return ResourceManager.GetString("Prekladac", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text pro překlad.
+        /// </summary>
+        internal static string TextProPreklad {
+            get {
+                return ResourceManager.GetString("TextProPreklad", resourceCulture);
             }
         }
         
