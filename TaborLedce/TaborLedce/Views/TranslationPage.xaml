@@ -121,7 +121,7 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <StackLayout HorizontalOptions="FillAndExpand" IsEnabled="{Binding TranslationMorseCode,  Converter={StaticResource inverter}}" >
-                            <maskededit:SfMaskedEdit ValidationMode="KeyPress" Value="{Binding TranslationText, Mode=TwoWay}"  Mask="[0-9a-zA-Z.\|,―\s]{0,}" MaskType="RegEx"  Keyboard="Default"/>
+                            <maskededit:SfMaskedEdit ValidationMode="KeyPress" Value="{Binding TranslationText, Mode=TwoWay}"  Mask="[0-9a-zA-Z.\|,―\s]{0,150}" MaskType="RegEx"  Keyboard="Default"/>
                         </StackLayout>
                         <Image Grid.Column="1" Source="translation.png" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="End"
                                                Margin="0,0,5,0">
@@ -192,8 +192,8 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
             <datagrid:SfDataGrid Row="3" AutoGenerateColumns="false"
                                  ItemsSource="{Binding MyTranslations}"
                                  ColumnSizer="Star"
-                                 HeaderRowHeight="52"
-                                 RowHeight="140"
+                                 HeaderRowHeight="25"
+                                 RowHeight="100"
                                  SelectionMode="Single"
                                  VerticalOverScrollMode="None">
 

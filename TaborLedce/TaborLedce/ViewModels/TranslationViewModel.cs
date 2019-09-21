@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
@@ -8,6 +7,7 @@ using TaborLedce.BL;
 using TaborLedce.Models;
 using TaborLedce.Services;
 using Xamarin.Forms;
+using static System.String;
 
 namespace TaborLedce.ViewModels
 {
@@ -15,13 +15,22 @@ namespace TaborLedce.ViewModels
     {
         private readonly ILocalDataManager _localDataManager;
         private readonly ITranslationFacade _translationFacade;
+        private bool _translationMorseCode;
         public ObservableCollection<TranslationItem> MyTranslations { get; set; }
         public string TranslationText { get; set; }
-        public bool TranslationMorseCode { get; set; }
+
+        public bool TranslationMorseCode
+        {
+            get => _translationMorseCode;
+            set
+            {
+                _translationMorseCode = value;
+                TranslationText = string.Empty;
+            }
+        }
+
         public ICommand CreateTranslationCommand { get; set; }
-
         public ICommand DeleteAllTranslationCommand { get; set; }
-
         public ICommand KeyPressedCommand { get; set; }
         
 
@@ -50,7 +59,7 @@ namespace TaborLedce.ViewModels
                 return;
             }
 
-            TranslationText = String.Join(String.Empty, TranslationText, character);
+            TranslationText = Join(Empty, TranslationText, character);
         }
 
         private void DeleteAllTranslations()
@@ -61,18 +70,17 @@ namespace TaborLedce.ViewModels
 
         private void CreateNewTranslation()
         {
-            if(string.IsNullOrEmpty(TranslationText) || string.IsNullOrWhiteSpace(TranslationText))
+            if(IsNullOrEmpty(TranslationText) || IsNullOrWhiteSpace(TranslationText))
                 return;
 
             if (TranslationMorseCode)
             {
-                _translationFacade.TranslateFromMorseCodeToClassic();
+                TranslationText = _translationFacade.TranslateFromMorseCodeToClassic(TranslationText);
             }
-
 
             MyTranslations.Insert(0,new TranslationItem{Text = TranslationText});
             _localDataManager.SaveTransaltions(Enumerable.ToList(MyTranslations));
-            TranslationText = string.Empty;
+            TranslationText = Empty;
         }
     }
 }

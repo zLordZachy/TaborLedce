@@ -1,4 +1,8 @@
-﻿namespace TaborLedce.BL
+﻿using System.Collections.Generic;
+using System.Linq;
+using TaborLedce.Models;
+
+namespace TaborLedce.BL
 {
     public class TranslationFacade : ITranslationFacade
     {
@@ -7,19 +11,34 @@
             if (string.IsNullOrEmpty(inputText))
                 return string.Empty;
 
+            List<MorseCodeItem> morseCodeItems = MorseCodeItems.GetAll();
+
             string[] splitedText = inputText.Split('|');
+            string outputText = string.Empty;
 
             foreach (string morseCodeLettr in splitedText)
             {
-                string textLettr = TranslateMorsecodeLetter(morseCodeLettr);
+                if (string.IsNullOrEmpty(morseCodeLettr)|| string.IsNullOrWhiteSpace(morseCodeLettr))
+                {
+                    outputText += " ";
+                    continue;
+                }
+
+
+                MorseCodeItem code = TranslateMorsecodeLetter(morseCodeLettr, morseCodeItems);
+                if (code != null)
+                {
+                    outputText += code.Lettr;
+                }
             }
 
-            return "";
+            return outputText;
         }
 
-        private string TranslateMorsecodeLetter(string morseCodeLettr)
+        private MorseCodeItem TranslateMorsecodeLetter(string morseCodeLettr, List<MorseCodeItem> morseCodeItems)
         {
-            return "";
+
+            return morseCodeItems.FirstOrDefault(x => x.Code.Equals(morseCodeLettr));
         }
     }
 }
