@@ -11,8 +11,7 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
              x:Class="TaborLedce.Views.TranslationPage"
              xmlns:assets="clr-namespace:TaborLedce.Assets;assembly=TaborLedce"
              xmlns:behaviors="clr-namespace:TaborLedce.Behaviors;assembly=TaborLedce"
-            xmlns:converter="clr-namespace:TaborLedce.Converters;assembly=TaborLedce"
-             >
+             xmlns:converter="clr-namespace:TaborLedce.Converters;assembly=TaborLedce">
     
     <NavigationPage.TitleView>
         <Label Text="{x:Static assets:Messages.Prekladac}" TextColor="AliceBlue" FontSize="Large"  />
@@ -93,9 +92,10 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                                                 TrackWidthRequest="60"
                                                                 TrackHeightRequest="25"
                                                                 TrackCornerRadius="18"
-                                                                TrackBorderWidth="0"
+                                                                TrackBorderWidth="1"
                                                                 TrackBorderColor="Black"
-                                                                TrackImageSource="codeN.png"
+                                                                TrackColor="White"                   
+                                                                TrackImageSource="codeAB.png"
                                                                 
                                                                 ThumbImageSource="translation.png"  
                                                                 HasThumbShadow="False"
@@ -196,11 +196,8 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                  RowHeight="100"
                                  SelectionMode="Single"
                                  VerticalOverScrollMode="None">
-
                 <datagrid:SfDataGrid.Columns>
-
                     <datagrid:GridTemplateColumn HeaderCellTextSize="16"
-
                                                  HeaderFontAttribute="Bold"
                                                  HeaderText="{x:Static assets:Messages.HystorieZadani}"
                                                  LineBreakMode="TailTruncation"
@@ -211,7 +208,7 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                 <Grid ColumnSpacing="10"
                                       RowSpacing="10">
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="140" />
+                                        <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
 
                                     <Grid.ColumnDefinitions>
@@ -241,7 +238,6 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                            TextColor="Black" />
                                 </Grid>
                             </DataTemplate>
-
                         </datagrid:GridTemplateColumn.CellTemplate>
                     </datagrid:GridTemplateColumn>
                 </datagrid:SfDataGrid.Columns>
