@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TaborLedce.Models;
-using TaborLedce.PlatformSpecific;
+﻿using TaborLedce.PlatformSpecific;
 using TaborLedce.Services;
 using TaborLedce.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 namespace TaborLedce.Views
 {
@@ -28,7 +22,6 @@ namespace TaborLedce.Views
         protected override async void OnAppearing()
         {
              await _viewModel.OnLoad();
-      
             base.OnAppearing();
         }
 

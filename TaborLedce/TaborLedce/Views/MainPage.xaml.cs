@@ -41,7 +41,7 @@ namespace TaborLedce.Views
                         break;
                 }
             }
-
+         
             var newPage = MenuPages[id];
 
             if (newPage != null && Detail != newPage)

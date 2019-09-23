@@ -9,12 +9,7 @@ xmlns:listview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfL
              Title="Menu">
 
     <StackLayout VerticalOptions="FillAndExpand">
-        <Grid RowSpacing="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="3*" />
-                <RowDefinition Height="7*"/>
-            </Grid.RowDefinitions>
-            <StackLayout Grid.Row="0" BackgroundColor="#017943">
+            <StackLayout BackgroundColor="#017943" Margin="0,0,0,5" >
                 <Image Aspect="AspectFit" Source="Tent.png"></Image>
                 <Label  HorizontalOptions="Center" TextColor="White" FontSize="Large" Text="Tábor Ledce" ></Label>
             </StackLayout>
@@ -34,6 +29,5 @@ xmlns:listview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfL
                     </listview:SfListView.ItemTemplate>
                 </listview:SfListView>
             </StackLayout>
-        </Grid>
     </StackLayout>
 </ContentPage>
