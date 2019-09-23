@@ -30,40 +30,25 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
   
 
     <ContentPage.Content>
-        <Grid Padding="15">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="1*" />
-                <RowDefinition Height="17*"  />
-            </Grid.RowDefinitions>
-            <Grid Row="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="25"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition  Width="*"/>
-                        </Grid.ColumnDefinitions>
-                    <StackLayout VerticalOptions="Start">
-                        <Label
-                               Text="{x:Static assets:Messages.TextProPreklad}" FontSize="Medium" VerticalOptions="Center"
+        <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                    <StackLayout VerticalOptions="CenterAndExpand" >
+                        <Label Text="{x:Static assets:Messages.TextProPreklad}" FontSize="Medium" Margin="5,0,0,0"
                                VerticalTextAlignment="Center" />
-                    </StackLayout>
-                        <sfSwitch:SfSwitch Grid.Column="1"
+                     </StackLayout>
+                        <StackLayout HorizontalOptions="EndAndExpand">
+                            <sfSwitch:SfSwitch 
                                              IsOn="{Binding TranslationMorseCode}"
                                              x:Name="ModeSwitch"
-                                             VerticalOptions="Start"
-                                             HorizontalOptions="End"
                                              AllowIndeterminateState="False"
                                              VisualType="Custom">
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="On">
-                                        <VisualState.Setters>
-                                            <Setter Property="SwitchSettings">
-                                                <Setter.Value>
-                                                    <sfSwitch:DefaultSwitchSettings x:TypeArguments="sfSwitch:OnState"
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="On">
+                                            <VisualState.Setters>
+                                                <Setter Property="SwitchSettings">
+                                                    <Setter.Value>
+                                                        <sfSwitch:DefaultSwitchSettings x:TypeArguments="sfSwitch:OnState"
                                                                 TrackWidthRequest="60"
                                                                 TrackHeightRequest="25"
                                                                 TrackCornerRadius="18"
@@ -79,16 +64,16 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                                                 ThumbHeightRequest="25"
                                                                 ThumbCornerRadius="17"
                                                                 ThumbColor="Transparent"/>
-                                                </Setter.Value>
-                                            </Setter>
-                                        </VisualState.Setters>
-                                    </VisualState>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </VisualState.Setters>
+                                        </VisualState>
 
-                                    <VisualState x:Name="Off">
-                                        <VisualState.Setters>
-                                            <Setter Property="SwitchSettings">
-                                                <Setter.Value>
-                                                    <sfSwitch:DefaultSwitchSettings x:TypeArguments="sfSwitch:OffState"
+                                        <VisualState x:Name="Off">
+                                            <VisualState.Setters>
+                                                <Setter Property="SwitchSettings">
+                                                    <Setter.Value>
+                                                        <sfSwitch:DefaultSwitchSettings x:TypeArguments="sfSwitch:OffState"
                                                                 TrackWidthRequest="60"
                                                                 TrackHeightRequest="25"
                                                                 TrackCornerRadius="18"
@@ -104,27 +89,23 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                                                 ThumbHeightRequest="25"
                                                                 ThumbCornerRadius="17"
                                                                 ThumbColor="Transparent"/>
-                                                </Setter.Value>
-                                            </Setter>
-                                        </VisualState.Setters>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                        </sfSwitch:SfSwitch>
-                    </Grid>
-            <Grid Row="1" HorizontalOptions="StartAndExpand">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="25"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="10*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <StackLayout HorizontalOptions="FillAndExpand" IsEnabled="{Binding TranslationMorseCode,  Converter={StaticResource inverter}}" >
-                            <maskededit:SfMaskedEdit ValidationMode="KeyPress" Value="{Binding TranslationText, Mode=TwoWay}"  Mask="[0-9a-zA-Z.\|,―\s]{0,150}" MaskType="RegEx"  Keyboard="Default"/>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                            </sfSwitch:SfSwitch>
                         </StackLayout>
-                        <Image Grid.Column="1" Source="translation.png" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="End"
-                                               Margin="0,0,5,0">
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" IsEnabled="{Binding TranslationMorseCode,  Converter={StaticResource inverter}}" >
+                    <maskededit:SfMaskedEdit HorizontalOptions="FillAndExpand" ValidationMode="KeyPress" Value="{Binding TranslationText, Mode=TwoWay}"  Mask="[0-9a-zA-Z.\|,―\s]{0,150}" MaskType="RegEx"  Keyboard="Default"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="End" VerticalOptions="Center">
+                        <Image Source="translation.png" Aspect="AspectFit" Margin="0,0,5,0" HeightRequest="25" WidthRequest="25">
                             <Image.Behaviors>
                                 <behaviors:ViewTappedButtonBehavior Command="{Binding OnLoginCommand}" AnimationType="Rotate"  />
                             </Image.Behaviors>
@@ -132,16 +113,12 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                 <TapGestureRecognizer Command="{Binding CreateTranslationCommand}" />
                             </Image.GestureRecognizers>
                         </Image>
-                    </Grid>
-            <Grid Row="2"  HorizontalOptions="Center" IsVisible="{Binding TranslationMorseCode}">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <sfSwitch:SfButton Command="{Binding KeyPressedCommand}" CommandParameter="." Grid.Column="0" >
+                </StackLayout>
+            </StackLayout>
+
+                <StackLayout Orientation="Horizontal"  VerticalOptions="Fill" HorizontalOptions="FillAndExpand" IsVisible="{Binding TranslationMorseCode}" Margin="5,0,5,0">
+               
+                <sfSwitch:SfButton HorizontalOptions="FillAndExpand"  Command="{Binding KeyPressedCommand}" CommandParameter="." Grid.Column="0" >
                     <sfSwitch:SfButton.Content>
                         <Image Source="dot.png" 
                                HeightRequest="25" 
@@ -150,7 +127,7 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                VerticalOptions="Center"/>
                     </sfSwitch:SfButton.Content>
                 </sfSwitch:SfButton>
-                <sfSwitch:SfButton  Grid.Column="1" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter="―">
+                    <sfSwitch:SfButton HorizontalOptions="FillAndExpand"  ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter="―">
                     <sfSwitch:SfButton.Content>
                         <Image Source="line.png" 
                                HeightRequest="25" 
@@ -159,7 +136,7 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                VerticalOptions="Center"/>
                     </sfSwitch:SfButton.Content>
                 </sfSwitch:SfButton>
-                <sfSwitch:SfButton  Grid.Column="2" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter="|">
+                    <sfSwitch:SfButton  HorizontalOptions="FillAndExpand" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter="|">
                     <sfSwitch:SfButton.Content>
                         <Image Source="deliminator.png" 
                                HeightRequest="25" 
@@ -168,7 +145,7 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                VerticalOptions="Center"/>
                     </sfSwitch:SfButton.Content>
                 </sfSwitch:SfButton>
-                <sfSwitch:SfButton  Grid.Column="3" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter=" ">
+                    <sfSwitch:SfButton HorizontalOptions="FillAndExpand" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter=" ">
                     <sfSwitch:SfButton.Content>
                         <Image Source="space.png" 
                                
@@ -178,7 +155,7 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                VerticalOptions="Center"/>
                     </sfSwitch:SfButton.Content>
                 </sfSwitch:SfButton>
-                <sfSwitch:SfButton  Grid.Column="4" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter="back">
+                    <sfSwitch:SfButton  HorizontalOptions="FillAndExpand" ShowIcon="True" Command="{Binding KeyPressedCommand}" CommandParameter="back">
                     <sfSwitch:SfButton.Content>
                         <Image Source="backSpace.png" 
                                HeightRequest="25" 
@@ -187,14 +164,12 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                                VerticalOptions="Center"/>
                     </sfSwitch:SfButton.Content>
                 </sfSwitch:SfButton>
-            </Grid>
-
-            <datagrid:SfDataGrid Row="3" AutoGenerateColumns="false"
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand">
+                <datagrid:SfDataGrid AutoGenerateColumns="false" VerticalOptions="FillAndExpand"
                                  ItemsSource="{Binding MyTranslations}"
                                  ColumnSizer="Star"
                                  HeaderRowHeight="25"
-                                 RowHeight="100"
-                                 SelectionMode="Single"
                                  VerticalOverScrollMode="None">
                 <datagrid:SfDataGrid.Columns>
                     <datagrid:GridTemplateColumn HeaderCellTextSize="16"
@@ -205,8 +180,7 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
 
                         <datagrid:GridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Grid ColumnSpacing="10"
-                                      RowSpacing="10">
+                                <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
@@ -242,6 +216,7 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                     </datagrid:GridTemplateColumn>
                 </datagrid:SfDataGrid.Columns>
             </datagrid:SfDataGrid>
-        </Grid>
+            </StackLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

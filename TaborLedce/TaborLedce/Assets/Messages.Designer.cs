@@ -61,11 +61,38 @@ namespace TaborLedce.Assets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chyba připojení.
+        /// </summary>
+        internal static string ChybaPripojeni {
+            get {
+                return ResourceManager.GetString("ChybaPripojeni", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hystorie zadání.
         /// </summary>
         internal static string HystorieZadani {
             get {
                 return ResourceManager.GetString("HystorieZadani", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NEJNOVĚJŠÍ FOTKY.
+        /// </summary>
+        internal static string InstagramPhotos {
+            get {
+                return ResourceManager.GetString("InstagramPhotos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nepodařilo se načíst fotky z táborového instagramu. .
+        /// </summary>
+        internal static string M001 {
+            get {
+                return ResourceManager.GetString("M001", resourceCulture);
             }
         }
         

@@ -117,8 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ChybaPripojeni" xml:space="preserve">
+    <value>Chyba připojení</value>
+  </data>
   <data name="HystorieZadani" xml:space="preserve">
     <value>Hystorie zadání</value>
+  </data>
+  <data name="InstagramPhotos" xml:space="preserve">
+    <value>NEJNOVĚJŠÍ FOTKY</value>
+  </data>
+  <data name="M001" xml:space="preserve">
+    <value>Nepodařilo se načíst fotky z táborového instagramu. </value>
   </data>
   <data name="Morseovka" xml:space="preserve">
     <value>Morseovka</value>

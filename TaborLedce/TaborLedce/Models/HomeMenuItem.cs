@@ -3,7 +3,8 @@
     public enum MenuItemType
     {
         MorseCode = 0,
-        About =1
+        About =1,
+        Instagram
     }
     public class HomeMenuItem
     {

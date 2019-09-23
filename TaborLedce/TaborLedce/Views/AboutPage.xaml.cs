@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
+using TaborLedce.PlatformSpecific;
+using TaborLedce.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,5 +16,7 @@ namespace TaborLedce.Views
         {
             InitializeComponent();
         }
+
+      
     }
 }
