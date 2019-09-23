@@ -79,6 +79,15 @@ namespace TaborLedce.Assets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Instagram fotky.
+        /// </summary>
+        internal static string InstagramFotky {
+            get {
+                return ResourceManager.GetString("InstagramFotky", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to NEJNOVĚJŠÍ FOTKY.
         /// </summary>
         internal static string InstagramPhotos {

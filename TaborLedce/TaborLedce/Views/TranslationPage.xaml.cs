@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using Syncfusion.SfDataGrid.XForms;
 using TaborLedce.BL;
 using TaborLedce.PlatformSpecific;
 using TaborLedce.Services;
@@ -18,5 +19,6 @@ namespace TaborLedce.Views
             BindingContext = viewModel;
             InitializeComponent();
         }
+     
     }
 }

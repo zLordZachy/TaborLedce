@@ -28,8 +28,8 @@ namespace TaborLedce.ViewModels
             MenuItems = new ObservableCollection<HomeMenuItem>
             {
                 new HomeMenuItem {Id = MenuItemType.MorseCode, Title=Messages.Morseovka, Icon= $"{FontAwesomeIcons.CommentDots}", FontFamily = Application.Current.Resources["FontAwesomeSolid"]},
+                new HomeMenuItem {Id = MenuItemType.Instagram, Title=Messages.InstagramFotky, Icon= $"{FontAwesomeIcons.Instagram}", FontFamily = Application.Current.Resources["FontAwesomeBrands"]},
                 new HomeMenuItem {Id = MenuItemType.About, Title=Messages.Oaplikaci, Icon= $"{FontAwesomeIcons.Info}", FontFamily = Application.Current.Resources["FontAwesomeSolid"]},
-                new HomeMenuItem {Id = MenuItemType.Instagram, Title="Instagram", Icon= $"{FontAwesomeIcons.Info}", FontFamily = Application.Current.Resources["FontAwesomeSolid"]},
             };
 
             //ListViewMenu.SelectionChanged += async (sender, e) =>

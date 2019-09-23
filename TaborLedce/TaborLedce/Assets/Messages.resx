@@ -123,6 +123,9 @@
   <data name="HystorieZadani" xml:space="preserve">
     <value>Hystorie zadání</value>
   </data>
+  <data name="InstagramFotky" xml:space="preserve">
+    <value>Instagram fotky</value>
+  </data>
   <data name="InstagramPhotos" xml:space="preserve">
     <value>NEJNOVĚJŠÍ FOTKY</value>
   </data>

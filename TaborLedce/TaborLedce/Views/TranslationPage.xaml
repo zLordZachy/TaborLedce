@@ -11,7 +11,8 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
              x:Class="TaborLedce.Views.TranslationPage"
              xmlns:assets="clr-namespace:TaborLedce.Assets;assembly=TaborLedce"
              xmlns:behaviors="clr-namespace:TaborLedce.Behaviors;assembly=TaborLedce"
-             xmlns:converter="clr-namespace:TaborLedce.Converters;assembly=TaborLedce">
+             xmlns:converter="clr-namespace:TaborLedce.Converters;assembly=TaborLedce"
+xmlns:xForms="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
     
     <NavigationPage.TitleView>
         <Label Text="{x:Static assets:Messages.Prekladac}" TextColor="AliceBlue" FontSize="Large"  />
@@ -166,56 +167,50 @@ xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion
                 </sfSwitch:SfButton>
             </StackLayout>
             <StackLayout VerticalOptions="FillAndExpand">
-                <datagrid:SfDataGrid AutoGenerateColumns="false" VerticalOptions="FillAndExpand"
-                                 ItemsSource="{Binding MyTranslations}"
-                                 ColumnSizer="Star"
-                                 HeaderRowHeight="25"
-                                 VerticalOverScrollMode="None">
-                <datagrid:SfDataGrid.Columns>
-                    <datagrid:GridTemplateColumn HeaderCellTextSize="16"
-                                                 HeaderFontAttribute="Bold"
-                                                 HeaderText="{x:Static assets:Messages.HystorieZadani}"
-                                                 LineBreakMode="TailTruncation"
-                                                 MappingName="Name">
+                <xForms:SfListView  ItemsSource="{Binding MyTranslations}" AutoFitMode="DynamicHeight" FocusBorderColor="#017943" SelectionBackgroundColor="#017943">
+                    <xForms:SfListView.HeaderTemplate>
+                        <DataTemplate>
+                                <Label  VerticalOptions="Center" HorizontalOptions="Center"  Text="{x:Static assets:Messages.HystorieZadani}"></Label>
+                        </DataTemplate>
+                    </xForms:SfListView.HeaderTemplate>
+                    <xForms:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BorderColor="Black" HasShadow="True"  Margin="5">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
 
-                        <datagrid:GridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*" />
-                                    </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                    </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0"
+                                       Grid.Column="0"
+                                       Margin="10,10,16,0"
+                                       LineBreakMode="WordWrap"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalOptions="Center"
+                                       FontSize="15"
+                                       Text="{Binding Text}"
+                                       TextColor="Black" />
 
-                                    <Label Grid.Row="0"
-                                           Grid.Column="0"
-                                           Margin="10,10,16,0"
-                                           LineBreakMode="WordWrap"
-                                           VerticalTextAlignment="Center"
-                                           HorizontalOptions="Center"
-                                           FontSize="15"
-                                           Text="{Binding Text}"
-                                           TextColor="Black" />
-
-                                    <Label Grid.Row="0"
-                                           Grid.Column="1"
-                                           Margin="0,10,16,0"
-                                           LineBreakMode="WordWrap"
-                                           VerticalTextAlignment="Center"
-                                           HorizontalOptions="Center"
-                                           FontSize="15"
-                                           FontFamily="{StaticResource Morse}"
-                                           Text="{Binding Text}"
-                                           TextColor="Black" />
-                                </Grid>
-                            </DataTemplate>
-                        </datagrid:GridTemplateColumn.CellTemplate>
-                    </datagrid:GridTemplateColumn>
-                </datagrid:SfDataGrid.Columns>
-            </datagrid:SfDataGrid>
+                                <Label Grid.Row="0"
+                                       Grid.Column="1"
+                                       Margin="0,10,16,0"
+                                       LineBreakMode="WordWrap"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalOptions="Center"
+                                       FontSize="15"
+                                       FontFamily="{StaticResource Morse}"
+                                       Text="{Binding Text}"
+                                       TextColor="Black" />
+                            </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </xForms:SfListView.ItemTemplate>
+                </xForms:SfListView>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

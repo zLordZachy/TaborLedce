@@ -28,6 +28,7 @@ namespace TaborLedce.ViewModels
         {
             try
             {
+                Images.Clear();
                 var instagramMetadata = await _instagramService.GetInstagramMetadata();
                 IEnumerable<StandardResolution> data = instagramMetadata.data.Select(x => x.images.standard_resolution);
                 foreach (var image in data)
