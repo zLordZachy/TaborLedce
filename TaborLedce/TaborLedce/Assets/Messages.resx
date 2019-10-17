@@ -141,6 +141,9 @@
   <data name="Prekladac" xml:space="preserve">
     <value>PŘEKLADAČ</value>
   </data>
+  <data name="Rostliny" xml:space="preserve">
+    <value>Rostliny</value>
+  </data>
   <data name="TextProPreklad" xml:space="preserve">
     <value>Text pro překlad</value>
   </data>

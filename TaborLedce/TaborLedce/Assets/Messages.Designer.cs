@@ -133,6 +133,15 @@ namespace TaborLedce.Assets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rostliny.
+        /// </summary>
+        internal static string Rostliny {
+            get {
+                return ResourceManager.GetString("Rostliny", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Text pro překlad.
         /// </summary>
         internal static string TextProPreklad {

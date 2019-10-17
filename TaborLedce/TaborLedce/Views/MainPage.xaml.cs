@@ -39,6 +39,9 @@ namespace TaborLedce.Views
                     case (int)MenuItemType.Instagram:
                         MenuPages.Add(id, new NavigationPage(new InstagramPage()));
                         break;
+                    case (int)MenuItemType.Plans:
+                        MenuPages.Add(id, new NavigationPage(new PlansPage()));
+                        break;
                 }
             }
          

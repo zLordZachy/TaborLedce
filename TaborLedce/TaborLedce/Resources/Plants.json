@@ -1,0 +1,128 @@
+[
+    {
+        "Name": "Hloh",
+        "LatinName": "Crataegus L",
+        "Description": "Hlohy jsou keře až malé stromy dorůstající zpravidla výšky 3–12 m. Na větvičkách jsou často trny dlouhé 1–6 (zřídka až 10) cm, brachyblasty jsou na vrcholu také často kolcovité. Listy jsou jednoduché, střídavé a většinou na zimu opadávají, řidčeji v teplejších krajích i přetrvávají přes zimu. Čepele jsou nečleněné nebo členěné, někdy až hluboce peřenosečné, na okraji pilovité až vroubkované. Palisty jsou kopinaté až poloměsíčité. Květy jsou oboupohlavné, 5četné. Kalich je přirostlý k češuli. Korunní lístky jsou nejčastěji bílé, řidčeji krémové nebo světle až sytě růžové (často u pěstovaných). Tyčinek je nejčastěji 10–20. Semeník je spodní, čnělek může být 1–5. Plodem je malvice, která může být červená, fialová, oranžová nebo černá.Uvnitř je 1–5 peciček se silně sklerifikovanou stěnou.",
+        "Image": "Hloh.png"
+    },
+    {
+        "Name": "Buk",
+        "LatinName": "Fagus",
+        "Description": "Buky jsou jednodomé, opadavé stromy s hladkou kůrou. Zimní pupeny jsou dlouhé, rezavě hnědé, špičaté, kryté střechovitými šupinami. Listy jsou jednoduché, střídavé, dvouřadě uspořádané, s tenkou čepelí. Postranní žilky jsou nevětvené, víceméně souběžné, končící na okraji čepele v ostrém nebo nezřetelném zubu. Palisty jsou brzy opadavé. Květenství jsou jednopohlavná a vyrůstají v paždí listů. Samčí květy jsou sdružené ve volné, stopkaté, mnohokvěté hlávce, mají srostlé kališní lístky a obsahují 6 až 16 tyčinek a zakrnělé zbytky semeníku. Okvětí nese 4 až 7 laloků. Samičí květy jsou zpravidla ve skupince po 2, podepřené jednoduchou, čtyřčetnou číškou a obklopené četnými listeny. Samičí květy mají volné kališní lístky, gyneceum je složeno ze 3 plodolistů se 3 volnými, zahnutými čnělkami. Plodem jsou 2 (1 až 3) vejcovité nebo trojhranné oříšky uzavřené v dřevnaté číšce otevírající se zpravidla 4 chlopněmi. Číška je na povrchu pokrytá krátkými, tuhými ostny. Plody dozrávají v 1. roce po opylení.",
+        "Image": "Buk.png"
+    },
+    {
+        "Name": "Lípa",
+        "LatinName": "Tilia",
+        "Description": "Listy jsou střídavé, srdčité, čepel pilovitá až zubatá. Květy jsou ve vrcholících, zpravidla převislých. Stopka květenství má v dolní části přisedlý listen, který vytrvává i za plodu a tvoří létací aparát pro rozšiřování plodů. Květy jsou oboupohlavné, pětičetné. Tyčinek je 15–80, na bázi většinou srostlé v 5 svazečků. Semeník je pětipouzdrý, blizna pětilaločná. Plod je jednopouzdrý oříšek, semeno zpravidla 1, vzácně 2. Květy jsou opylovány hmyzem, plody rozšiřovány větrem.",
+        "Image":  "Lipa.png"
+    },
+    {
+        "Name": "Javor",
+        "LatinName": "Acer",
+        "Description": "Javory, s výjimkou javoru jasanolistého, mají listy vstřícně křížmostojné a dlouze řapíkaté, jednoduché a většinou hluboce laločnaté, případně dlanitě dělené nebo zpeřené. U javoru jasanolistého jsou listy dlanitě laločnaté a při bázi srdčité. Kanada si javorový list zvolila za národní symbol a je vyobrazen na kanadské vlajce. Květy jsou v hroznech, latách nebo chocholících, a to nících nebo vzpřímených. Tyčinky jsou po 4–10 v jednom květu. Převážná většina druhů je jednodomých, u některých se objevuje tzv. funkční dvoudomost, kdy se na stromech vyskytují sice oboupohlavné květy, ale orgány jednoho z pohlaví jsou zakrnělé. Několik málo druhů je dvoudomých. Květy jsou opylovány převážně hmyzem, pouze minimum druhů je větrosnubných; plody jsou šířeny větrem. Plody jsou křídlaté dvounažky; křídla jsou jazykovitá, blanitá, se silnou žilkou na vnějším okraji. Klíčení semen je u všech javorů, s výjimkou javoru stříbrného, nadzemní.",
+        "Image": "Javor.png"
+    },
+    {
+        "Name": "Habr",
+        "LatinName": "Carpinus",
+        "Description": "rod stromů, vzácně keřů. Květy jsou jednopohlavné, v oddělených květenstvích. V samčích jehnědách jsou jednotlivé květy umístěny jednotlivě v úžlabí listenů, okvětí i listénce u nich chybí, tyčinek obsahují 4-12. Samičí květy jsou uspořádány také v jehnědách a mají šupinkovité okvětí a 2 nitkovité blizny. Plod je oříšek s křídlem, které vzniklo srůstem 3 listénců. Opylování i rozšiřování plodů se děje pomocí větru.",
+        "Image": "Habr.png"
+    },
+    {
+        "Name": "Dub",
+        "LatinName": "Quercus",
+        "Description": "Duby jsou dlouhověké, pomalu rostoucí opadavé nebo stálezelené stromy, řidčeji i keře, s tvrdým dřevem. Borka bývá hluboce brázditá nebo podélně odlupčivá. Zimní pupeny jsou vejcovité, s okrouhlým či hranatým průřezem, nahloučené při koncích větévek a kryté několika až mnoha střechovitě se překrývajícími šupinami. Listy jsou střídavé, jednoduché, s opadavými nenápadnými palisty. Čepel listů je nejčastěji laločnatá, řidčeji celistvá se zubatým okrajem nebo celokrajná, měkká nebo tuhá. Žilnatina je zpeřená, s postranními žilkami buď paralelními, nevětvenými a běžícími až k listovému okraji, nebo větvenými a spojujícími se před dosažením listového okraje. Květy jsou drobné, v jednopohlavních květenstvích nahloučených nejčastěji při bázi ročních výmladků. Samčí květenství jsou nící jehnědy. Samčí květy jsou jednotlivé na ose květenství, s kalichovitým, čtyř až sedmilaločným okvětím a nejčastěji se šesti (2 až 12) tyčinkami s tenkými nitkami. Samičí květenství jsou chudokvěté jehnědy nebo strboulky, vyvíjející se v paždí listů blíže konci větévky. Na bázi samičího květu je miskovitá číška. Okvětí je nejčastěji šestilaločné, plodolisty a čnělky bývají tři, výjimečně šest. Plodem je nažka (označovaná též jako oříšek) podepřená zveličelou dřevnatou číškou a nazývaná žalud. Plody dozrávají v prvním nebo až ve druhém roce",
+        "Image": "Dub.png"
+    },
+    {
+        "Name": "Olše",
+        "LatinName": "Alnus",
+        "Description": "Nejznámější olší je olše lepkavá, strom rostoucí i v ČR; olše lepkavá roste po celé Evropě a byla introdukována i jinam. Nejvyšším druhem je olše červená, rostoucí na západním pobřeží Severní Ameriky, dosahuje výšky až 35 metrů. Olše lepkavá a olše srdčitá mohou dorůst výšky kolem 30 metrů. Naproti tomu olše zelená je zřídka vyšší než 5 metrů. Listy jsou opadavé, střídavé, jednoduché a pilovité. Květem jsou jehnědy, samčí jsou protáhlé, samičí dřevnatí a připomínají malé šištice jehličnatých stromů. Oba typy jehněd se vyskytují na jedné rostlině, často se objevují brzy zjara, ještě před vyrašením listů. Jsou hlavně větrosnubné, ale opylují je i včely. Olše jsou medonosné rostliny a jejich pyl nesený větrem může působit problémy alergikům.Co se týče dřeva, mezi bělí a jádrem nejsou signifikantní rozdíly. Dřevo olše nemá výrazné letokruhy a její kresba je ryze monotónní. Čerstvě po pokácení je dřevo načervenale oranžové, ovšem postupem času vlivem přístupu vzduchu tmavne do načervenale bílé až načervenale hnědé. Přestože olše roste převážně u vodních toků, dřevo nezadržuje vodu a velmi dobře vysychá.",
+        "Image": "Olse.png"
+    },
+    {
+        "Name": "Topol",
+        "LatinName": "Populus L.",
+        "Description": "Topoly jsou dvoudomé opadavé stromy. Listy jsou střídavé, dlouze řapíkaté. Květy jsou v květenstvích, jehnědách. Květy jsou jednopohlavné, v paždí listenů. Samčí květy mají 8 (vzácněji až 30) tyčinek. Samičí květy mají gyneceum srostlé ze 2 (vzácně až 4) plodolistů. Plodem je tobolka, která se otvírá chlopněmi. Opylování se děje větrem, stejně jako šíření semen, která se tak šíří s pomocí bohatého chmýří. Klíčivost semen není dlouhá a zpravidla potřebují k vyklíčení vlhký holý substrát, např. bahnitý náplav řeky. V roce 2019 byly vyškrtnuty Paní Stanislavou",
+        "Image": "Topol.png"
+    },
+    {
+        "Name": "Vrba",
+        "LatinName": "Salix",
+        "Description": "Obsáhlý rod dřevin z čeledi vrbovitých, zahrnující kosmopolitně rozšířené stromy, keře i drobné keříčky. V české květeně se vyskytuje 22 původních druhů, z toho jeden vyhynulý; dalších několik introdukovaných se pěstuje v kultuře. Přirozeně rostou zpravidla poblíž vody, v lužních lesích, na vlhkých loukách, rašeliništích či podél vodních toků. Vesměs jsou velmi náročné na světlo. Jako zdroj rychle obnovovaného dřeva a proutí jsou odedávna využívány člověkem, vrbová kůra obsahuje léčivé látky. Patří k významným včelařským rostlinám.",
+        "Image": "Vrba.png"
+    },
+    {
+        "Name": "Jabloň",
+        "LatinName": "Malus",
+        "Description": "Jabloň (Malus) je rod opadavých listnatých stromů z čeledi růžovitých, patří mezi jádroviny. Jabloně široce pěstované pro plody zvané jablka jsou označovány jako taxonomický druh jabloň domácí, na křížení současných odrůd se ovšem podílelo více druhů rodu jabloň. Jabloň je cizosprašný strom. Je převážně diploidní, triploidní. Jabloně patří mezi dlouhověké stromy. Běžně se dožívají 60–80 let i nad 100 let a dorůstají výšky až 15 metrů v závislosti na druhu, odrůdě a podmínkách. V ovocnářské praxi se uplatnily pupenové mutace (trvalá změna genotypu) na určité části stromu, které nazýváme spur-typy.",
+        "Image": "Jablon.png"
+    },
+    {
+        "Name": "Modřín",
+        "LatinName": "Larix",
+        "Description": "Jde o dlouhověké, jednodomé, poměrně rychle rostoucí, 15–50 metrů vysoké jehličnaté stromy s rovným průběžným kmenem a rovnovážně odstálými nebo převislými větvemi v nepravidelných přeslenech. Větve jsou dvojího typuː prodlužovací (auxiblasty) a zkrácené (brachyblasty), nesoucí jehlice a šišky. Silná borka je ve stáří hluboce rozpukaná, červenohnědé barvy. Zprvu kůlovitě rostoucí kořen se brzy rozvětvuje na silné postranní kořeny, které modříny dobře ukotvují v půdě. Jako převážná většina jiných dřevin využívají mykorhizu (ektomykorhiza).Měkké a tenké jehlice vyrůstající na čerstvých letorostech jednotlivě, na dvouletých a starších větvích po svazečcích z brachyblastů. Jehlice jsou ploché, u většiny druhů svěže světle zelené, na rubu či oboustranně kýlnaté a mají dva článkované pryskyřičné kanálky. Na podzim se barví zlatožlutě a opadávají. Šištice se vytváří z pupenů na konci brachyblastů. Samčí jsou převislé, žluté, samičí vzpřímené, růžové či červené, vzácně i zelené nebo bílé. Dozrávají obvykle téhož roku v okrouhlé, vejčité nebo kuželovitě růžicovité nerozpadavé šišky, které na stromě vytrvávají několik let.",
+        "Image": "Modrin.png"
+    },
+    {
+        "Name": "Borovice",
+        "LatinName": "Pinus",
+        "Description": "Rod stálezelených jehličnatých stromů, popřípadě keřů, z čeledi borovicovité (Pinaceae). Se zhruba 110 druhy jde o největší rod čeledi. Stejně jako ostatní zástupci čeledi borovicovitých se přirozeně vyskytují výhradně na severní polokouli (výjimkou je Pinus merkusii, jež na Sumatře zasahuje i na polokouli jižní). Areál rozšíření rodu je velikýː rostou od oblasti severských lesů přes mírný pás a subtropy až do hor tropů, někde vystupují až k horní hranici lesa či nad ní. Pochází pravděpodobně ze Starého světa, maxima druhového bohatství ovšem dosahuje v Severní a Střední Americe, další bohatou oblastí je východní Asie, Indočína a oblast Himálaje. V Evropě se vyskytuje 12–13 původních druhů, z toho 9–10 dvoujehličných a 3 pětijehličné. Vesměs jde o silně světlomilné, konkurenčně slabé stromy s velmi malými nároky na kvalitu půdy, které jsou schopny dobře snášet nejrůznější stanoviště; mnohé plní roli pionýrských dřevin. Některé severoamerické i středomořské druhy jsou velmi dobře adaptovány na lesní požáry, jak dokládají již fosilní nálezy. Mezi borovice patří i nejstarší žijící vyšší organismy na Zemiː některé exempláře borovice dlouhověké (Pinus longaeva) jsou prokazatelně staré více než 4 800 let.",
+        "Image": "Borovice.png"
+    },
+    {
+        "Name": "Smrk",
+        "LatinName": "Picea",
+        "Description": "Smrky jsou vždyzelené stromy obvykle dosahující mohutného vzrůstu (nejvíce smrk sitka až 80 m[1]), s korunou většinou kuželovitého nebo válcovitě kuželovitého tvaru. Větvení je výrazně monopodiální, větve vyrůstají v přeslenech. Architektura větví a koruny je morfologicky značně proměnlivá, a to i v rámci jednotlivých druhů, s větvemi nižších řádů deskovitě uspořádanými nebo převisajícími. Kůra (borka) je tenká, drsná, šupinovitého vzhledu, dřevo obsahuje pryskyřičné kanálky. Jehlice jsou dvojího typuː jednak čtyřhranného průřezu s jedním cévním svazkem (většina druhů), jednak ploché, na rubu se dvěma bílými průduchovými proužky jako u jedle (smrk omorika, sitka). Na rozdíl od jedle vyrůstají na vystouplých listových polštářcích, po jejich opadání jsou tedy větvičky drsné, což je jedním z hlavních rozlišovacích znaků tohoto druhu od ostatních jehličnanů.",
+        "Image": "Smrk.png"
+    },
+    {
+        "Name": "Jedle",
+        "LatinName": "Abies",
+        "Description": "Rod stálezelených, jednodomých, zpravidla dlouhověkých jehličnatých stromů z čeledi borovicovitých (Pinaceae), podčeledi jedlové (Abietoideae), zahrnující v různých pojetích 40–50 druhů rozšířených na severní polokouli, převážně v Severní Americe, střední a jihovýchodní Evropě, ve Středomoří a ve východní Asii.Jedle dorůstají zpravidla výšek 30–60 metrů, některé druhy výjimečně i přes 80 metrů a dožívají se stáří i 700–800 let.[1] Kmen mívá hladkou kůru, měnící se ve stáří v tenkou rozpukanou borku, u některých druhů v mládí s pryskyřičnými puchýřky. Jehlice jsou typicky na vrcholu tupě zaoblené a lehce vykrojené, vespod obvykle se dvěma bělavými proužky; to však neplatí pro všechny druhy (viz níže). Na rozdíl od smrku nevyrůstají na listových polštářcích a větvičky jsou proto hladké. Tvar jehlic a jejich postavení na větvičce jsou významným druhově určovacím znakem. Šišky na větvích nevisí, ale vyrůstají směrem nahoru a ve stáří se rozpadají na stromech. Dřevo jedlí patří mezi měkká dřeva a neobsahuje pryskyřici, v hospodářství je ceněno méně než podobné dřevo smrkové. Řada druhů má značný sadovnický význam, využití mají i aromatické esenciální oleje a pryskyřice. Jedle též patří k nejoblíbenějším vánočním stromkům. Dle paleobotanických nálezů jsou jedle známy již z období eocénu, tedy starších třetihor, rod jako takový vznikl patrně na konci druhohor.[2] Těžištěm jejich druhového bohatství je východní Asie a západní část Severní Ameriky, kde patří k důležitým lesotvorným dřevinám, tvořícím smíšené i jednodruhové porosty. V jižních oblastech místy vystupují až k horní hranici lesa. Ve střední Evropě je původní pouze jediný druh – jedle bělokorá (Abies alba).",
+        "Image": "Jedle.png"
+    },
+    {
+        "Name": "Ostružina",
+        "LatinName": "Rubus",
+        "Description": "velmi velký rod známých rostlin z čeledi růžovité. Jejich plody jsou známé jako ostružiny a maliny, které jsou z botanického hlediska souplodí peckoviček. Jsou to vzpřímené nebo plazivé keře s ostny.",
+        "Image": "Ostruzina.png"
+    },
+    {
+        "Name": "Ostružiník maliník",
+        "LatinName": "Rubus idaeus",
+        "Description": "Maliník je původní domácí rostlinou v celé Evropě a Asii včetně Japonska, přesto nikdy nevzbudil zájem žádného starověkého národa na kontinentě. Neobjevil se v žádných řeckých, latinských nebo čínských písemnostech. Ve skutečnosti nezískal maliník žádný opravdový význam v Evropě ani Severní Americe až do 19. století. Nelze tvrdit, že nebyl do té doby ani pěstován. V katalogu Johna Tradescanta z poloviny 17. století byla zapsána řada kultivarů maliníku, už tehdy se objevovaly bílé i červené druhy, což samo o sobě předpokládá značné stáří procesu pěstování. Existuje několik dalších zmínek o tomto ovoci, ale čím dále do minulosti, tím častěji ho popisují jako kyselé. Podle toho se dá soudit, že při pěstování nedošlo k výběru kvalitnějších odrůd. Maliny mohly být ovocem, které bylo ponejprv pěstováno v evropských zemích a v Anglii domkáři, kteří přenesli pruty maliníku z divočiny do svých zahrádek, jak to udělali s drobnými planými lesními jahodami. Výběr a zkvalitnění druhů tu proběhlo dříve, než ovoce vzbudilo zájem profesionálních pěstitelů.Maliny jsou oblíbeným lesním ovocem a jejich použití je velmi široké – malinový sirup, do jogurtů, zmrzliny, může se použít jako přírodní barvivo, dále se setkáme s malinovou příchutí například v pudinku.",
+        "Image": "Malina.png"
+    },
+    {
+        "Name": "Brusnice borůvka",
+        "LatinName": "Vaccinium myrtillus",
+        "Description": "Léčivá rostlina z čeledi vřesovcovitých, rodu brusnice, která je známá pod lidovým názvem borůvka, její souvislý porost také jako borůvčí. Její modrý plod (bobule) stejného názvu má výraznou chuť a schopnost barvit do modra. Je zdrojem antioxidantů, které mohou mj. působit příznivě v prevenci rakoviny. Borůvka je hustě rozvětvený, ale spíše nízký keřík (50 cm) s opadavými listy. Vejčitě okrouhlé listy jsou na lodyze uspořádány střídavě, jsou lysé (bez trichomů) s krátkými řapíky. Naopak květy jsou výrazně stopkaté, objevují se již od dubna do června. Mají světle zelenou korunu (v rostlinné říši poměrně neobvyklá barva) a zakrnělý kalich. Plodem brusnice borůvky jsou borůvky, černomodré bobule, v nichž nalezneme při podrobnějším zkoumání mnoho drobných semen. Dozrávají až od června do září, ale ve vyšších polohách vždy později.",
+        "Image": "Boruvka.png"
+    },
+    {
+        "Name": "Bez",
+        "LatinName": "Sambucus",
+        "Description": "Bezy jsou opadavé keře, stromy nebo i vytrvalé byliny se vstřícnými zpeřenými listy. Kořenový systém je bohatě větvený a mělký. Listy jsou na okraji pilovité, s palisty nebo s nektárii vzniklými přeměnou palistů. Větve jsou tlusté, s nápadnými lenticelami a tlustou dření. Květenství jsou koncové vrcholičnaté laty nebo ploché vrcholíky. Květy jsou pravidelné, drobné, většinou pětičetné, bílé, zelenavé nebo žlutavé. Kališní i korunní lístky jsou srostlé. Tyčinek je 5, jsou přirostlé při bázi koruny a vyčnívají ven. Semeník obsahuje 3 až 5 komůrek, v každé je jediné vajíčko. Plodem je dužnatá, nejčastěji černá nebo červená peckovice připomínající bobuli a obsahující 3 až 5 semen",
+        "Image": "Bez.png"
+    },
+    {
+        "Name": "Bříza",
+        "LatinName": "Betula",
+        "Description": "Jsou to stromy či keře různého vzrůstu, od plazivých keřů v subarktické oblasti až po vysoké stromy mírného pásma. Kůra (borka) bývá v mládí hladká, u většiny druhů světlá až bělavá nebo bílá, u některých druhů i tmavá, hnědá až hnědočerná. Květenství jsou oddělené samčí a samičí jehnědy. Plody jsou okřídlené nažky s jedním semenem.",
+        "Image": "Briza.png"
+    },
+    {
+        "Name": "Topol osika",
+        "LatinName": "Populus tremula",
+        "Description": "Listy jsou okrouhlé, široce vejčité, do 8 cm, v mládí bronzové, později na líci šedozelené, světlejší na rubu, obvykle oboustranně holé, zakončené velmi hrubými zuby na dlouhých, štíhlých a zploštělých řapících. Díky takto tvarovaným řapíkům se list ve větru rozkmitává, odtud přirovnání „třese se jako osika“. Samčí květy mají červené prašníky, samičí květy jsou zelené, rodí se v převislých jehnědách až 8 cm dlouhých, na oddělených rostlinách.Kvete od začátku března do poloviny dubna, pyl osiky je středně významným alergenem. Vzhledem k časné době květu je topol osika významný pro včelařství. Plody jsou malé, zelené tobolky s malinkými semeny v bílých, bavlněných chloupcích. Topol osika je rychle rostoucí dřevina, může se dožít stáří až 160 let.",
+        "Image": "Osika.png"
+    },
+    {
+        "Name": "Jírovec maďal Kaštan",
+        "LatinName": "Aesculus hippocastanum",
+        "Description": "Dorůstá výšky až 30 metrů s kulovitou, mohutnou korunou a kmenem o průměru kolem 2 m. V mládí má hladkou tmavošedou borku, která je později černavá, na lomu červenohnědá a olupuje se v malých šupinách. Kvete v květnu až červnu, případně v červenci.[2] Květy jsou uspořádány ve vzpřímených, hustých, bohatých až 30 cm dlouhých latách. Korunní lístky jsou zbarveny bíle se žlutými a červenými skvrnami. Na okraji jsou zprohýbané a brvité. Příbuzné druhy kvetou červeně či růžově. Pupeny jsou velké a lepkavé. Listy jsou vstřícné, dlanitě složené, pěti až sedmičetné, dlouze řapíkaté.Lístky jsou podlouhle obvejčité, nestejně zubaté, na rubu na žilnatině rezavě chlupaté. Mohou dorůstat délky 10 až 25 cm. Plod je až 6 cm velká, ostnitá, světle zelená tobolka s 1 až 3 tmavě hnědými semeny známými jako kaštany",
+        "Image": "Kastan.png"
+    }
+]

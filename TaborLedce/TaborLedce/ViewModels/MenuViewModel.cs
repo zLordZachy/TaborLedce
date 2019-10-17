@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
 using TaborLedce.Assets;
 using TaborLedce.Models;
 using TaborLedce.Utils;
@@ -28,18 +29,11 @@ namespace TaborLedce.ViewModels
             MenuItems = new ObservableCollection<HomeMenuItem>
             {
                 new HomeMenuItem {Id = MenuItemType.MorseCode, Title=Messages.Morseovka, Icon= $"{FontAwesomeIcons.CommentDots}", FontFamily = Application.Current.Resources["FontAwesomeSolid"]},
+                new HomeMenuItem {Id = MenuItemType.Plans, Title=Messages.Rostliny, Icon= $"{FontAwesomeIcons.Seedling}", FontFamily = Application.Current.Resources["FontAwesomeSolid"]},
                 new HomeMenuItem {Id = MenuItemType.Instagram, Title=Messages.InstagramFotky, Icon= $"{FontAwesomeIcons.Instagram}", FontFamily = Application.Current.Resources["FontAwesomeBrands"]},
                 new HomeMenuItem {Id = MenuItemType.About, Title=Messages.Oaplikaci, Icon= $"{FontAwesomeIcons.Info}", FontFamily = Application.Current.Resources["FontAwesomeSolid"]},
             };
-
-            //ListViewMenu.SelectionChanged += async (sender, e) =>
-            //{
-            //    if (e. == null)
-            //        return;
-
-            //    var id = (int)((HomeMenuItem)e.SelectedItem).Id;
-            //    await RootPage.NavigateFromMenu(id);
-            //};
+            
         }
 
         public async void SelectedItemChange(HomeMenuItem homeMenuItem)
