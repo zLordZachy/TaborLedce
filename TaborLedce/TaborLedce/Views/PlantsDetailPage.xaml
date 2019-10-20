@@ -3,28 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:assets="clr-namespace:TaborLedce.Assets;assembly=TaborLedce"
              mc:Ignorable="d"
-             x:Class="TaborLedce.Views.PlantsDetailPage">
+             x:Class="TaborLedce.Views.PlantsDetailPage"
+             >
+    <NavigationPage.TitleView>
+        <Label Text="{x:Static assets:Messages.DetailRostliny}" TextColor="AliceBlue" FontSize="Large"  />
+    </NavigationPage.TitleView>
     <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
+        <ScrollView Grid.Row="1">
             <StackLayout>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                    <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                        <Image Source="{Binding SelectedPlant.Image}" VerticalOptions="Center" Aspect="AspectFill"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
+                    <ContentView VerticalOptions="Fill" HorizontalOptions="Center">
+                        <Image Source="{Binding SelectedPlant.Image}" VerticalOptions="CenterAndExpand" Aspect="AspectFill"/>
                     </ContentView>
                 </StackLayout>
-            </StackLayout>
-            <ScrollView Grid.Row="1">
                 <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
                     <Label FontSize="22" Text="{Binding SelectedPlant.Name}"></Label>
                     <Label FontSize="18"  Text="{Binding SelectedPlant.LatinName}"></Label>
                     <Label FontSize="18"  Text="{Binding SelectedPlant.Description}"></Label>
                 </StackLayout>
-            </ScrollView>
-        </Grid>
+        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

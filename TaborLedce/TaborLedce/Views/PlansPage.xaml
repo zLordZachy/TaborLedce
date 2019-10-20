@@ -10,7 +10,7 @@
     <ContentPage.Content>
         <StackLayout>
             <xForms:SfListView Margin="0"
-                               x:Name="listView" 
+                               x:Name="plantsListView" 
                                Padding="0,5,0,5"
                                 SelectionMode="None"
                                 ItemSpacing="10,5,10,5"
@@ -23,7 +23,7 @@
                         <Frame BackgroundColor="White" Padding="1" HasShadow="True">
                             <Grid>
                                 <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.GetItemDetailCommand, Source={x:Reference listView}}" CommandParameter="{Binding .}}"/>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.GetItemDetailCommand, Source={x:Reference plantsListView}}" CommandParameter="{Binding .}}"/>
                                 </Grid.GestureRecognizers>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="0.35*" />

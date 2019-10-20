@@ -70,6 +70,15 @@ namespace TaborLedce.Assets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Detail rostliny.
+        /// </summary>
+        internal static string DetailRostliny {
+            get {
+                return ResourceManager.GetString("DetailRostliny", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hystorie zadání.
         /// </summary>
         internal static string HystorieZadani {

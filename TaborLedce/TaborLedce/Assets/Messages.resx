@@ -120,6 +120,9 @@
   <data name="ChybaPripojeni" xml:space="preserve">
     <value>Chyba připojení</value>
   </data>
+  <data name="DetailRostliny" xml:space="preserve">
+    <value>Detail rostliny</value>
+  </data>
   <data name="HystorieZadani" xml:space="preserve">
     <value>Hystorie zadání</value>
   </data>

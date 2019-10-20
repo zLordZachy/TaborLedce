@@ -35,8 +35,7 @@
                            VerticalOptions="CenterAndExpand"
                            HorizontalOptions="CenterAndExpand">
                         <Image.Behaviors>
-                            <behaviors:ViewTappedButtonBehavior Command="{Binding OnLoginCommand}"
-                                                                AnimationType="Scale" />
+                            <behaviors:ViewTappedButtonBehavior Command="{Binding OnLoginCommand}" AnimationType="Scale" />
                         </Image.Behaviors>
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding TranslationCommand}" />
