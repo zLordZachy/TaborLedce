@@ -6,19 +6,25 @@
              xmlns:xForms="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              mc:Ignorable="d"
              x:Class="TaborLedce.Views.PlansPage">
+
     <ContentPage.Content>
         <StackLayout>
             <xForms:SfListView Margin="0"
-                                Padding="0,5,0,5"
+                               x:Name="listView" 
+                               Padding="0,5,0,5"
                                 SelectionMode="None"
-                                BackgroundColor="#F0F0F0"
                                 ItemSpacing="10,5,10,5"
                                 ItemsSource="{Binding Plants}"
+                                SelectedItem="{Binding SelectedPlat, Mode=TwoWay}"
+                                SelectionBackgroundColor="Blue"
                                 ItemSize="100">
-                <xForms:SfListView.ItemTemplate>
+            <xForms:SfListView.ItemTemplate>
                     <DataTemplate>
                         <Frame BackgroundColor="White" Padding="1" HasShadow="True">
                             <Grid>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.GetItemDetailCommand, Source={x:Reference listView}}" CommandParameter="{Binding .}}"/>
+                                </Grid.GestureRecognizers>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="0.35*" />
                                     <ColumnDefinition Width="0.65*" />

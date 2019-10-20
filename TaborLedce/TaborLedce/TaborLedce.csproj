@@ -18,21 +18,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Fody" Version="6.0.0">
+    <PackageReference Include="Fody" Version="6.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3-beta2" />
     <PackageReference Include="PropertyChanged.Fody" Version="3.1.3" />
-    <PackageReference Include="Syncfusion.Licensing" Version="17.2.0.51" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.2.0.51" />
-    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="17.2.0.51" />
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.2.0.51" />
-    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="17.2.0.51" />
-    <PackageReference Include="Syncfusion.Xamarin.SfNavigationDrawer" Version="17.2.0.51" />
-    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="17.2.0.51" />
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.778476-pre1" />  
-    <PackageReference Include="Xamarin.Essentials" Version="1.3.0" />
+    <PackageReference Include="Syncfusion.Licensing" Version="17.3.0.17" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.3.0.17" />
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="17.3.0.17" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.3.0.17" />
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="17.3.0.17" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNavigationDrawer" Version="17.3.0.17" />
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="17.3.0.17" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.851321-pre3" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,6 +40,9 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PlantsDetailPage.xaml.cs">
+      <DependentUpon>PlantsDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\TranslationPage.xaml.cs">
       <DependentUpon>TranslationPage.xaml</DependentUpon>
@@ -58,6 +61,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\PlansPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\PlantsDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

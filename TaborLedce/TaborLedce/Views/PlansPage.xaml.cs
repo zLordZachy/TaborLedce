@@ -9,7 +9,7 @@ namespace TaborLedce.Views
     {
         public PlansPage()
         {
-            BindingContext = new PlansViewModel();
+            BindingContext = new PlansViewModel(Navigation);
             InitializeComponent();
         }
     }

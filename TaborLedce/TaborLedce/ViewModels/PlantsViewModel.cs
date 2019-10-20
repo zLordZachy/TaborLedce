@@ -1,42 +1,41 @@
-﻿
-
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using Newtonsoft.Json;
-using Syncfusion.Data.Extensions;
 using TaborLedce.Models;
+using TaborLedce.Resources;
 using TaborLedce.Views;
+using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace TaborLedce.ViewModels
 {
     public class PlansViewModel : BaseViewModel
     {
         public ObservableCollection<Plant> Plants { get; set; }
+        public ICommand GetItemDetailCommand { get; set; }
 
+        private readonly INavigation _navigation;
 
-        public PlansViewModel()
+        public PlansViewModel(INavigation navigation)
         {
+            _navigation = navigation;
             Plants = new ObservableCollection<Plant>();
-            GetJsonData();
+            PlantsResource pnPlantsResource = PlantsResource.Instance;
+
+            IList<Plant> plats = pnPlantsResource.Data;
+            plats.ForEach(x => Plants.Add(x));
+            GetItemDetailCommand = new Command(GetItemDetail);
         }
 
-        void GetJsonData()
+        private void GetItemDetail(object obj)
         {
-            string jsonFileName = "Plants.json";
-            List<Plant> plats = new List<Plant>();
-            string a = JsonConvert.SerializeObject(plats);
-
-            var assembly = typeof(MainPage).GetTypeInfo().Assembly;
-            Stream stream = assembly.GetManifestResourceStream($"{assembly.GetName().Name}.Resources.{jsonFileName}");
-            using (var reader = new System.IO.StreamReader(stream))
-            {
-                string jsonString = reader.ReadToEnd();
-                plats = JsonConvert.DeserializeObject<List<Plant>>(jsonString);
-            }
-            plats.ForEach(x => Plants.Add(x));
+            Plant selectedPlant  = obj as Plant;
+            _navigation.PushAsync(new PlantsDetailPage(selectedPlant));
         }
     }
 }

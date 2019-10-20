@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
-
+using TaborLedce.Assets;
 using Xamarin.Forms;
 
 namespace TaborLedce.ViewModels
@@ -9,9 +9,9 @@ namespace TaborLedce.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
+            Title = $"{Messages.Oaplikaci}";
 
-            OpenWebCommand = new Xamarin.Forms.Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
+            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://www.facebook.com/taborledcekopidlno/")));
         }
 
         public ICommand OpenWebCommand { get; }

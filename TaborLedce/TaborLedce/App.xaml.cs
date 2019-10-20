@@ -12,7 +12,7 @@ namespace TaborLedce
         public App()
         {
             //Register Syncfusion license
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTQwMTY2QDMxMzcyZTMyMmUzMGM3SkkvUUtQZVVoZzRYQXhua0drYTQxVE0xbmhlOVIyTW9IOTZZb0krVVk9");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTU5NzczQDMxMzcyZTMzMmUzME5IRWlxRmcwZWlReGhkVnR0cTV5Z2dIZFREU3V0MjVJQVBMVUdrTVNQMW89");
 
             InitializeComponent();
 
