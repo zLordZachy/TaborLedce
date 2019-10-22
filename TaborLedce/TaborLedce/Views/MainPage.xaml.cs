@@ -42,6 +42,9 @@ namespace TaborLedce.Views
                     case (int)MenuItemType.Plans:
                         MenuPages.Add(id, new NavigationPage(new PlansPage()));
                         break;
+                    case (int)MenuItemType.MarchingMarks:
+                        MenuPages.Add(id, new NavigationPage(new MarchingMarksPage()));
+                        break;
                 }
             }
          

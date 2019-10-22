@@ -70,13 +70,13 @@ namespace TaborLedce.ViewModels
 
         private void CreateNewTranslation()
         {
-            if(IsNullOrEmpty(TranslationText) || IsNullOrWhiteSpace(TranslationText))
-                return;
-
             if (TranslationMorseCode)
             {
                 TranslationText = _translationFacade.TranslateFromMorseCodeToClassic(TranslationText);
             }
+
+            if (IsNullOrEmpty(TranslationText) || IsNullOrWhiteSpace(TranslationText))
+                return;
 
             MyTranslations.Insert(0,new TranslationItem{Text = TranslationText});
             _localDataManager.SaveTransaltions(Enumerable.ToList(MyTranslations));

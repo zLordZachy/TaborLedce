@@ -1,0 +1,62 @@
+﻿[
+  {
+    "Name": "Běž rovně",
+    "Image": "BezRovne.png"
+  },
+  {
+    "Name": "Dopis 5 kroků opačným směrem",
+    "Image": "Dopis5KrokuOpacnymSmerem.png"
+  },
+  {
+    "Name": "Končím značení",
+    "Image": "KoncimZnaceni.png"
+  },
+  {
+    "Name": "Odboč v levo",
+    "Image": "OdbocVlevo.png"
+  },
+  {
+    "Name": "Odboč v pravo",
+    "Image": "OdbocVpravo.png"
+  },
+  {
+    "Name": "Odboč vlevo",
+    "Image": "OdbocVlevo.png"
+  },
+  {
+    "Name": "Odešel jsem tam",
+    "Image": "OdeselJsemTam.png"
+  },
+  {
+    "Name": "Pokračuj",
+    "Image": "Pokracuj.png"
+  },
+  {
+    "Name": "Pokračujte podle značek",
+    "Image": "PokracujtePodleZancek.png"
+  },
+  {
+    "Name": "Rozdělte se",
+    "Image": "RozdelteSe.png"
+  },
+  {
+    "Name": "Směr tábor",
+    "Image": "SmerTabor.png"
+  },
+  {
+    "Name": "Tam ne!",
+    "Image": "TamNe.png"
+  },
+  {
+    "Name": "Vrátím se",
+    "Image": "VratimSe.png"
+  },
+  {
+    "Name": "Zastav za 10 min",
+    "Image": "ZastavZa10Min.png"
+  },
+  {
+    "Name": "Zrychli",
+    "Image": "Zrychli.png"
+  }
+]

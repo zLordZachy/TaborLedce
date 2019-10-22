@@ -115,6 +115,15 @@ namespace TaborLedce.Assets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pochodové značky.
+        /// </summary>
+        internal static string MarchingMarks {
+            get {
+                return ResourceManager.GetString("MarchingMarks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Morseovka.
         /// </summary>
         internal static string Morseovka {

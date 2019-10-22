@@ -5,7 +5,8 @@
         MorseCode = 0,
         About = 1,
         Instagram = 2,
-        Plans = 3
+        Plans = 3,
+        MarchingMarks = 4
     }
     public class HomeMenuItem
     {

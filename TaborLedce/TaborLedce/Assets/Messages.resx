@@ -135,6 +135,9 @@
   <data name="M001" xml:space="preserve">
     <value>Nepodařilo se načíst fotky z táborového instagramu. </value>
   </data>
+  <data name="MarchingMarks" xml:space="preserve">
+    <value>Pochodové značky</value>
+  </data>
   <data name="Morseovka" xml:space="preserve">
     <value>Morseovka</value>
   </data>
